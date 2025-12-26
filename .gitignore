@@ -1,2 +1,4 @@
 assets/scenes/
 .superpowers/
+__pycache__/
+*.pyc

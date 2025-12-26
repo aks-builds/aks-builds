@@ -1,0 +1,48 @@
+name: Refresh profile scene WebPs
+
+# Re-composites the four README scenes with live GitHub data (repo count,
+# contribution count, top awesome-list star count). Character footage in
+# assets/sources/ never changes; only the overlaid numbers do.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"      # weekly, Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Regenerate scene WebPs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_scenes.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/scene-hero.webp assets/scene-awesome.webp assets/scene-skills.webp assets/scene-contact.webp
+          git pull --rebase --autostash origin main || true
+          if [ -n "$(git status --porcelain assets/*.webp)" ]; then
+            git commit -m "chore(profile): refresh scene stats"
+            git push
+          else
+            echo "No stat changes this run."
+          fi

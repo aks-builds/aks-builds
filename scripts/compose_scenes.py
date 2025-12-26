@@ -66,40 +66,104 @@ def add_kanji(frame, kx, ky, kchar, kfont, kopacity):
 # ---------- Layout 1: cinematic title card (Gojo / hero) ----------
 def layout_titlecard(frame, cfg):
     W, H = frame.size
-    head_font = ImageFont.truetype(FONT_HEAD, cfg.get("head_size", 58))
-    sub_font = ImageFont.truetype(FONT_BODY, 15)
-    small_font = ImageFont.truetype(FONT_BODY, 13)
-    badge_font = ImageFont.truetype(FONT_BODY, 12)
+    head_font = ImageFont.truetype(FONT_HEAD, cfg.get("head_size", 46))
+    badge_font = ImageFont.truetype(FONT_BODY, 15)
+    stat_num_font = ImageFont.truetype(FONT_HEAD, 30)
+    stat_label_font = ImageFont.truetype(FONT_BODY, 12)
+    bottom_font = ImageFont.truetype(FONT_BODY, 15)
+    est_font = ImageFont.truetype(FONT_BODY, 13)
 
     kfont = ImageFont.truetype(FONT_HEAD, 220)
     frame = add_kanji(frame, W - 260, H - 260, cfg.get("kanji_char", "六眼"), kfont, 15)
     draw = ImageDraw.Draw(frame)
-    draw.rectangle([0, 0, W - 1, H - 1], outline=(255, 255, 255, 255), width=3)
 
+    # shard-cut frame: straight edges with two corners cut diagonally
+    m, c = 14, 44
+    shard = [(m, m), (W - m - c, m), (W - m, m + c), (W - m, H - m),
+             (m + c, H - m), (m, H - m - c), (m, m)]
+    draw.line(shard, fill=(255, 255, 255, 255), width=4, joint="curve")
+
+    # EST. stamp, top right, tucked inside the cut corner
+    est_text = cfg.get("est_text", "EST. 2023")
+    ebbox = draw.textbbox((0, 0), est_text, font=est_font)
+    ew, eh = ebbox[2] - ebbox[0] + 22, ebbox[3] - ebbox[1] + 14
+    est = Image.new("RGBA", (ew, eh), (250, 250, 250, 235))
+    ed = ImageDraw.Draw(est)
+    ed.rectangle([0, 0, ew - 1, eh - 1], outline=(0, 0, 0, 255), width=2)
+    ed.text((11, 6), est_text, font=est_font, fill=(10, 10, 10, 255))
+    est = est.rotate(-4, expand=True, resample=Image.BICUBIC)
+    frame.alpha_composite(est, (W - ew - 30, m + 14))
+
+    # name, glitch/outlined, top-left
     hx, hy = cfg["headline_pos"]
-    line_h = cfg.get("head_size", 58)
+    line_h = cfg.get("head_size", 46)
     for i, line in enumerate(cfg["headline"]):
         outlined(draw, (hx, hy + i * line_h), line, head_font,
-                 shadow_offset=(5, 5), shadow_fill=cfg["accent"] + (255,))
-    rule_y = hy + len(cfg["headline"]) * line_h + 6
-    draw.line([hx, rule_y, hx + 340, rule_y], fill=(255, 255, 255, 255), width=3)
-    draw.text((hx, rule_y + 10), cfg["subtitle"], font=sub_font, fill=(255, 255, 255, 255),
-               stroke_width=1, stroke_fill=(0, 0, 0, 255))
+                 shadow_offset=(4, 4), shadow_fill=cfg["accent"] + (255,))
 
-    # corner rating-style stamp, top right
+    # tech stack badges, packed row(s), alternating fill, slight rotation
+    by = hy + len(cfg["headline"]) * line_h + 12
+    bx = hx
+    row_h = 0
+    max_x = hx + cfg.get("badge_col_width", 340)
+    for i, item in enumerate(cfg["tech_stack"]):
+        fg = (10, 10, 10, 255) if i % 2 == 0 else (250, 250, 250, 255)
+        bg = (250, 250, 250, 235) if i % 2 == 0 else cfg["accent"] + (235,)
+        bbox = draw.textbbox((0, 0), item, font=badge_font)
+        tw, th = bbox[2] - bbox[0] + 20, bbox[3] - bbox[1] + 14
+        tmp = Image.new("RGBA", (tw, th), bg)
+        td = ImageDraw.Draw(tmp)
+        td.rectangle([0, 0, tw - 1, th - 1], outline=(0, 0, 0, 255), width=2)
+        td.text((10, 7 - bbox[1]), item, font=badge_font, fill=fg)
+        angle = -2 if i % 2 == 0 else 2
+        tmp = tmp.rotate(angle, expand=True, resample=Image.BICUBIC)
+        if bx + tmp.width > max_x and bx != hx:
+            bx = hx
+            by += row_h + 6
+            row_h = 0
+        frame.alpha_composite(tmp, (int(bx), int(by)))
+        bx += tmp.width + 6
+        row_h = max(row_h, tmp.height)
+    stack_bottom = by + row_h
+
+    # stat box, below the tech stack
     num, label = cfg["stat"]
-    stamp = Image.new("RGBA", (150, 62), (10, 10, 10, 220))
-    sd = ImageDraw.Draw(stamp)
-    sd.rectangle([0, 0, 149, 61], outline=(255, 255, 255, 255), width=2)
-    sd.text((10, 4), num, font=ImageFont.truetype(FONT_HEAD, 26), fill=(255, 255, 255, 255))
-    sd.text((10, 38), label, font=ImageFont.truetype(FONT_BODY, 9), fill=cfg["accent"] + (255,))
-    stamp = stamp.rotate(4, expand=True, resample=Image.BICUBIC)
-    frame.alpha_composite(stamp, (W - 170, 18))
+    sy = stat_bottom = stack_bottom + 22
+    stat_w, stat_h = 260, 84
+    stat = Image.new("RGBA", (stat_w, stat_h), (0, 0, 0, 235))
+    std = ImageDraw.Draw(stat)
+    std.rectangle([0, 0, stat_w - 1, stat_h - 1], outline=(255, 255, 255, 255), width=3)
+    std.text((16, 10), num, font=stat_num_font, fill=(255, 255, 255, 255))
+    std.text((16, 52), label, font=stat_label_font, fill=cfg["accent"] + (255,))
+    frame.alpha_composite(stat, (hx, sy))
 
-    # understated bottom-left link line
-    ly = H - 34
-    draw.text((hx, ly), cfg["links_line"], font=small_font, fill=(255, 255, 255, 255),
-               stroke_width=1, stroke_fill=(0, 0, 0, 255))
+    # bottom row: ISTQB cert box, "let's build something" callout, link pills
+    by = H - 74
+    istqb = cfg["istqb_line"]
+    ibbox = draw.textbbox((0, 0), istqb, font=bottom_font)
+    iw, ih = ibbox[2] - ibbox[0] + 24, ibbox[3] - ibbox[1] + 18
+    ibox = Image.new("RGBA", (iw, ih), (250, 250, 250, 235))
+    idraw = ImageDraw.Draw(ibox)
+    idraw.rectangle([0, 0, iw - 1, ih - 1], outline=(0, 0, 0, 255), width=2)
+    idraw.text((12, 9), istqb, font=bottom_font, fill=(10, 10, 10, 255))
+    frame.alpha_composite(ibox, (hx, by))
+
+    build_text = cfg.get("build_line", "LET'S BUILD SOMETHING")
+    bbbox = draw.textbbox((0, 0), build_text, font=bottom_font)
+    bw2, bh2 = bbbox[2] - bbbox[0] + 24, bbbox[3] - bbbox[1] + 18
+    bbox_img = Image.new("RGBA", (bw2, bh2), cfg["accent"] + (235,))
+    bdraw = ImageDraw.Draw(bbox_img)
+    bdraw.rectangle([0, 0, bw2 - 1, bh2 - 1], outline=(255, 255, 255, 255), width=2)
+    bdraw.text((12, 9), build_text, font=bottom_font, fill=(255, 255, 255, 255))
+    frame.alpha_composite(bbox_img, (hx + iw + 10, by))
+
+    ly2 = by + ih + 10
+    px = hx
+    for i, link in enumerate(cfg["links"]):
+        fill_c = (0, 0, 0, 235) if i < len(cfg["links"]) - 1 else cfg["accent"] + (235,)
+        w, h = rounded_pill(frame, (px, ly2), link, bottom_font, (255, 255, 255, 255), fill_c)
+        px += w + 10
+
     return frame
 
 
@@ -167,7 +231,7 @@ def layout_rpgsheet(frame, cfg):
 
     head_font = ImageFont.truetype(FONT_HEAD, 28)
     slot_font = ImageFont.truetype(FONT_BODY, 12)
-    label_font = ImageFont.truetype(FONT_BODY, 10)
+    label_font = ImageFont.truetype(FONT_BODY, 14)
 
     kfont_small = ImageFont.truetype(FONT_HEAD, 70)
     khost = Image.new("RGBA", panel.size, (0, 0, 0, 0))
