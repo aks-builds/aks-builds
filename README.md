@@ -22,8 +22,6 @@
 
 <img src="https://img.shields.io/badge/▎_What_I'm_shipping-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
 
-<br/><br/>
-
 <table>
   <tr>
     <td width="50%" valign="top">
@@ -59,11 +57,7 @@
 
 ---
 
-<img src="https://img.shields.io/badge/▎_Things_I_code_with-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
-&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="22" alt="laptop"/>
-&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" width="22" alt="fire"/>
-
-<br/><br/>
+<img src="https://img.shields.io/badge/▎_Things_I_code_with-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="22" alt="laptop"/>&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" width="22" alt="fire"/>
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
@@ -78,8 +72,6 @@
 ---
 
 <img src="https://img.shields.io/badge/▎_On_the_mic-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
-
-<br/><br/>
 
 <table>
   <tr>
@@ -118,9 +110,9 @@
 
 <img src="https://img.shields.io/badge/▎_GitHub_Stats-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
 
-<br/><br/>
-
 <div align="center">
+
+<br/>
 
 <img src="https://github-profile-trophy.vercel.app/?username=aks-builds&theme=darkhub&no-frame=true&margin-w=6&column=6" alt="trophies"/>
 
