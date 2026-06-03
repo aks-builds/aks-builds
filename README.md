@@ -20,33 +20,87 @@
 
 ---
 
-### What I'm shipping
+<img src="https://img.shields.io/badge/▎_What_I'm_shipping-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
 
-| | Project | About |
-|---|---|---|
-| 🤖 | [ai‑test‑failure‑analyzer](https://github.com/aks-builds/ai-test-failure-analyzer) | MCP server — reads failing tests, scans git history, produces ranked root-cause hypotheses in seconds |
-| 🎭 | [playwright‑userauth‑api‑suite](https://github.com/aks-builds/playwright-userauth-api-suite) | Playwright API test suite that auto-installs the analyzer on CI failure |
-| 🔫 | [Hitro](https://github.com/aks-builds/Hitro) | Local-first desktop API client — REST, gRPC, GraphQL, Kafka, WebSocket, SQS, MQTT + mock server |
-| 🔐 | [awesome‑owasp‑security‑testing](https://github.com/aks-builds/awesome-owasp-security-testing) | Curated OWASP toolkit — DAST, SAST, SCA, secret scanning, IaC, threat modeling, DevSecOps |
-| 📋 | [openspecpm](https://github.com/aks-builds/openspecpm) | Spec-driven BDD project management for AI agents — OpenSpec → BDD → GitHub / Jira / Linear |
-| 🏆 | [quality‑skills](https://github.com/aks-builds/quality-skills) | 50 production-focused QE skills for automation engineers and test leads |
+<br/><br/>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🤖 <a href="https://github.com/aks-builds/ai-test-failure-analyzer">ai-test-failure-analyzer</a></h4>
+      MCP server — reads failing tests, scans git history, and produces ranked root-cause hypotheses in seconds.
+    </td>
+    <td width="50%" valign="top">
+      <h4>🎭 <a href="https://github.com/aks-builds/playwright-userauth-api-suite">playwright-userauth-api-suite</a></h4>
+      Playwright API test suite that auto-installs the analyzer on CI failure and opens a GitHub Issue.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🔫 <a href="https://github.com/aks-builds/Hitro">Hitro</a></h4>
+      Local-first desktop API client — REST, gRPC, GraphQL, Kafka, WebSocket, SQS, MQTT + built-in mock server.
+    </td>
+    <td width="50%" valign="top">
+      <h4>🔐 <a href="https://github.com/aks-builds/awesome-owasp-security-testing">awesome-owasp-security-testing</a></h4>
+      Curated OWASP toolkit — DAST, SAST, SCA, secret scanning, IaC scanning, threat modeling, DevSecOps.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>📋 <a href="https://github.com/aks-builds/openspecpm">openspecpm</a></h4>
+      Spec-driven BDD project management for AI agents — OpenSpec → BDD specs → GitHub / Jira / Linear.
+    </td>
+    <td width="50%" valign="top">
+      <h4>🏆 <a href="https://github.com/aks-builds/quality-skills">quality-skills</a></h4>
+      50 production-focused QE skills for automation engineers, SDETs, and test leads.
+    </td>
+  </tr>
+</table>
 
 ---
 
-### On the mic
+<img src="https://img.shields.io/badge/▎_On_the_mic-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
 
-Sessions delivered at **NashLearn** & **NashKnolX**
+<br/><br/>
 
-| Session | |
-|---|---|
-| 🧠 AI-Assisted Test Failure Analysis *(upcoming · June 19, 2026)* | NashLearn |
-| 🤖 [Smart Test Data — Faker vs AI](https://www.youtube.com/watch?v=0H5A6l1fAHI) | NashKnolX |
-| ⚡ [Testing Event-Driven Architecture](https://www.youtube.com/watch?v=TRmYxFd9RG4) | NashKnolX |
-| 🧹 [Clean Code in Test Automation](https://www.youtube.com/watch?v=7X9lnn7kDNY) | NashKnolX |
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="https://www.youtube.com/watch?v=0H5A6l1fAHI">
+        <img src="https://img.youtube.com/vi/0H5A6l1fAHI/mqdefault.jpg" width="100%" alt="Smart Test Data — Faker vs AI"/>
+      </a>
+      <br/>
+      <sub><b>🤖 Smart Test Data — Faker vs AI</b></sub><br/>
+      <sub>NashKnolX</sub>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://www.youtube.com/watch?v=TRmYxFd9RG4">
+        <img src="https://img.youtube.com/vi/TRmYxFd9RG4/mqdefault.jpg" width="100%" alt="Testing Event-Driven Architecture"/>
+      </a>
+      <br/>
+      <sub><b>⚡ Testing Event-Driven Architecture</b></sub><br/>
+      <sub>NashKnolX</sub>
+    </td>
+    <td align="center" width="33%">
+      <a href="https://www.youtube.com/watch?v=7X9lnn7kDNY">
+        <img src="https://img.youtube.com/vi/7X9lnn7kDNY/mqdefault.jpg" width="100%" alt="Clean Code in Test Automation"/>
+      </a>
+      <br/>
+      <sub><b>🧹 Clean Code in Test Automation</b></sub><br/>
+      <sub>NashKnolX</sub>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+  <sub>🧠 <b>AI-Assisted Test Failure Analysis</b> &nbsp;·&nbsp; upcoming June 19, 2026 &nbsp;·&nbsp; NashLearn</sub>
+</div>
 
 ---
 
-### GitHub Stats
+<img src="https://img.shields.io/badge/▎_GitHub_Stats-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
+
+<br/><br/>
 
 <div align="center">
 
