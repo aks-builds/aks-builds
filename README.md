@@ -1,11 +1,14 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Aditya+Kumar+Singh+%F0%9F%91%8B;Speaker+%C2%B7+OSS+builder;I+break+things+professionally+%F0%9F%92%80" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Aditya+Kumar+Singh+%F0%9F%91%8B;I+break+things+professionally+%F0%9F%92%80" alt="Typing SVG" />
 
 <br/>
 
-<strong>Cloud Native Quality Engineer</strong><br/>
-Working at <a href="https://www.nashtechglobal.com">NashTech</a> &nbsp;·&nbsp; Speaker &nbsp;·&nbsp; OSS builder
+<strong>Cloud Native Quality Engineer</strong><br/><br/>
+
+<a href="https://www.nashtechglobal.com">
+  <img src="https://img.shields.io/badge/Working_at-NashTech-F37021?style=for-the-badge&labelColor=1a1a2e&logoColor=white" alt="NashTech"/>
+</a>
 
 <br/><br/>
 
@@ -45,16 +48,12 @@ Sessions delivered at **NashLearn** & **NashKnolX**
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=aks-builds&show_icons=true&theme=github_dark&hide_border=true" height="160"/>
+<img src="https://github-readme-stats.vercel.app/api?username=aks-builds&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117" height="160"/>
 &nbsp;&nbsp;
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=aks-builds&theme=dark&hide_border=true" height="160"/>
+<img src="https://streak-stats.demolab.com/?user=aks-builds&theme=dark&hide_border=true&background=0d1117" height="160"/>
 
 </div>
 
 ---
 
 > **Fun fact:** I break things for a living, build AI to explain why — and race F1 cars on weekends *(simulated, sadly).*
-
-<div align="center">
-<img src="https://komarev.com/ghpvc/?username=aks-builds&color=58a6ff&style=flat&label=Profile+Views"/>
-</div>
