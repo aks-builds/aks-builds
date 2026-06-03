@@ -114,10 +114,6 @@
 
 <br/>
 
-<img src="https://github-profile-trophy.vercel.app/?username=aks-builds&theme=darkhub&no-frame=true&margin-w=6&column=6" alt="trophies"/>
-
-<br/><br/>
-
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=aks-builds&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff&area=true&hide_border=true" alt="activity graph" width="100%"/>
 
 <br/>
