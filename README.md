@@ -128,4 +128,16 @@
 
 ---
 
+<details>
+<summary><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" width="18" alt="zap"/> &nbsp;<b>Recent GitHub Activity</b></summary>
+
+<br/>
+
+<!--START_SECTION:activity-->
+<!--END_SECTION:activity-->
+
+</details>
+
+---
+
 > **Fun fact:** I break things for a living, build AI to explain why — and race F1 cars on weekends *(simulated, sadly).*
