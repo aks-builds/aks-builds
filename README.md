@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Aditya+Kumar+Singh+%F0%9F%91%8B;Cloud+Native+Quality+Engineer;Building+AI-first+QA+tooling;Breaking+things+professionally+%F0%9F%92%80" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=26&pause=1000&color=58A6FF&center=true&vCenter=true&width=700&lines=Hey%2C+I'm+Aditya+Kumar+Singh+%F0%9F%91%8B;Speaker+%C2%B7+OSS+builder;I+break+things+professionally+%F0%9F%92%80" alt="Typing SVG" />
 
 <br/>
 
-**Cloud Native Quality Engineer**
-Working at [NashTech](https://www.nashtechglobal.com) &nbsp;·&nbsp; Speaker &nbsp;·&nbsp; OSS builder
+<strong>Cloud Native Quality Engineer</strong><br/>
+Working at <a href="https://www.nashtechglobal.com">NashTech</a> &nbsp;·&nbsp; Speaker &nbsp;·&nbsp; OSS builder
 
-<br/>
+<br/><br/>
 
 [![LinkedIn](https://img.shields.io/badge/Let's_connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/its-aks)
 
@@ -45,9 +45,9 @@ Sessions delivered at **NashLearn** & **NashKnolX**
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=aks-builds&show_icons=true&theme=github_dark&hide_border=true&include_all_commits=true&count_private=true" height="160"/>
+<img src="https://github-readme-stats.vercel.app/api?username=aks-builds&show_icons=true&theme=github_dark&hide_border=true" height="160"/>
 &nbsp;&nbsp;
-<img src="https://streak-stats.demolab.com?user=aks-builds&theme=github-dark-blue&hide_border=true" height="160"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=aks-builds&theme=dark&hide_border=true" height="160"/>
 
 </div>
 
@@ -56,5 +56,5 @@ Sessions delivered at **NashLearn** & **NashKnolX**
 > **Fun fact:** I break things for a living, build AI to explain why — and race F1 cars on weekends *(simulated, sadly).*
 
 <div align="center">
-<img src="https://visitcount.itsvg.in/api?id=aks-builds&label=Profile%20Views&color=1&icon=6&pretty=true" />
+<img src="https://komarev.com/ghpvc/?username=aks-builds&color=58a6ff&style=flat&label=Profile+Views"/>
 </div>
