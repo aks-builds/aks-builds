@@ -4,7 +4,9 @@
 
 <br/>
 
-<strong>Cloud Native Quality Engineer</strong><br/><br/>
+<strong>Cloud Native Quality Engineer</strong>
+
+<br/>
 
 <a href="https://www.nashtechglobal.com">
   <img src="https://img.shields.io/badge/Working_at-NashTech-F37021?style=for-the-badge&labelColor=1a1a2e&logoColor=white" alt="NashTech"/>
@@ -48,9 +50,15 @@ Sessions delivered at **NashLearn** & **NashKnolX**
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=aks-builds&show_icons=true&theme=github_dark&hide_border=true&bg_color=0d1117" height="160"/>
-&nbsp;&nbsp;
-<img src="https://streak-stats.demolab.com/?user=aks-builds&theme=dark&hide_border=true&background=0d1117" height="160"/>
+<img src="https://github-profile-trophy.vercel.app/?username=aks-builds&theme=darkhub&no-frame=true&margin-w=6&column=6" alt="trophies"/>
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=aks-builds&bg_color=0d1117&color=58a6ff&line=1f6feb&point=58a6ff&area=true&hide_border=true" alt="activity graph" width="100%"/>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/aks-builds/aks-builds/output/github-contribution-grid-snake-dark.svg" alt="contribution snake"/>
 
 </div>
 
