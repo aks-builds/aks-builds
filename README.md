@@ -50,8 +50,8 @@
       A local-first desktop API client built with Electron + React, supporting REST, gRPC, GraphQL, WebSocket, Kafka, AWS SQS, MQTT, SSE, and Socket.IO — with built-in mock server, load testing, request chaining, and response snapshot testing.
     </td>
     <td width="50%" valign="top">
-      <h4>🛠️ <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
-      —
+      <h4>🧪 <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
+      Reusable GitHub Actions workflows and automation scripts I share across my repositories.
     </td>
   </tr>
 </table>
@@ -143,8 +143,8 @@
 6. 🔒 Closed issue [#1](https://github.com/aks-builds/ai-test-failure-analyzer/issues/1) in [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
 7. 🎉 Created repository [aks-builds/playwright-userauth-api-suite](https://github.com/aks-builds/playwright-userauth-api-suite)
 8. 🎉 Created repository [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
-9. ⬆️ Pushed to [aks-builds/owasp_security_testing-training-aditya](https://github.com/aks-builds/owasp_security_testing-training-aditya)
-10. 💪 Opened PR [#2](https://github.com/aks-builds/owasp_security_testing-training-aditya/pull/2) in [aks-builds/owasp_security_testing-training-aditya](https://github.com/aks-builds/owasp_security_testing-training-aditya)
+9. ⬆️ Pushed to [aks-builds/Hitro](https://github.com/aks-builds/Hitro)
+10. 🎉 Created repository [aks-builds/Hitro](https://github.com/aks-builds/Hitro)
 <!--END_SECTION:activity-->
 
 </details>
