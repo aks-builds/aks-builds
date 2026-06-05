@@ -26,12 +26,22 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4>🛡️ <a href="https://github.com/aks-builds/clausa">clausa</a></h4>
-      Local-first, privacy-first AI that decodes any insurance policy into plain English — coverage, exclusions, gaps, and the questions to ask.
+      <h4>🛡️ <a href="https://github.com/aks-builds/cliproof">cliproof</a></h4>
+      Prove your CLI actually works. A Claude Code skill that captures a real terminal command and its real output as a polished screenshot or GIF — secrets redacted, command-guarded — and embeds it into your README as proof-it-runs evidence.
     </td>
     <td width="50%" valign="top">
-      <h4>🤖 <a href="https://github.com/aks-builds/ai-test-failure-analyzer">ai-test-failure-analyzer</a></h4>
-      MCP server for AI-assisted QA test failure analysis. Works with Playwright, pytest, Jest/Vitest, Cypress, WebdriverIO.
+      <h4>🤖 <a href="https://github.com/aks-builds/Smart-Test-Data-AI-vs-Faker.js">Smart-Test-Data-AI-vs-Faker.js</a></h4>
+      Companion code for my talk 'Smart Test Data — Faker vs AI' (NashKnolX): generating realistic test data with LLMs vs Faker.js.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🤖 <a href="https://github.com/aks-builds/Selenium-Automation-Ready-Prompts-with-LLM">Selenium-Automation-Ready-Prompts-with-LLM</a></h4>
+      Ready-to-use LLM prompts for generating production-grade Selenium test automation.
+    </td>
+    <td width="50%" valign="top">
+      <h4>🔐 <a href="https://github.com/aks-builds/awesome-owasp-security-testing">awesome-owasp-security-testing</a></h4>
+      A curated list of OWASP projects, standards, and companion open-source tools for security testing of web apps, APIs, mobile apps, and supporting infrastructure — covering DAST, SAST, SCA/SBOM, secret scanning, IaC scanning, threat modeling, and DevSecOps.
     </td>
   </tr>
   <tr>
@@ -40,18 +50,8 @@
       Playwright API test suite for the UserAuth service; consumer of ai-test-failure-analyzer
     </td>
     <td width="50%" valign="top">
-      <h4>📋 <a href="https://github.com/aks-builds/openspecpm">openspecpm</a></h4>
-      Spec-driven, BDD-shaped project management for AI agents. OpenSpec proposals → BDD specs → tracked work in GitHub / Azure    DevOps / Jira / Linear / GitLab.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>🔫 <a href="https://github.com/aks-builds/Hitro">Hitro</a></h4>
-      A local-first desktop API client built with Electron + React, supporting REST, gRPC, GraphQL, WebSocket, Kafka, AWS SQS, MQTT, SSE, and Socket.IO — with built-in mock server, load testing, request chaining, and response snapshot testing.
-    </td>
-    <td width="50%" valign="top">
-      <h4>🧪 <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
-      Reusable GitHub Actions workflows and automation scripts I share across my repositories.
+      <h4>🤖 <a href="https://github.com/aks-builds/ai-test-failure-analyzer">ai-test-failure-analyzer</a></h4>
+      MCP server for AI-assisted QA test failure analysis. Works with Playwright, pytest, Jest/Vitest, Cypress, WebdriverIO.
     </td>
   </tr>
 </table>
@@ -65,8 +65,8 @@
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![C#](https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![ShaderLab](https://img.shields.io/badge/ShaderLab-58A6FF?style=for-the-badge)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -135,16 +135,16 @@
 <br/>
 
 <!--START_SECTION:activity-->
-1. 🎉 Created repository [aks-builds/clausa](https://github.com/aks-builds/clausa)
-2. ⬆️ Pushed to [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
-3. ⬆️ Pushed to [aks-builds/aks-builds](https://github.com/aks-builds/aks-builds)
-4. ⬆️ Pushed to [aks-builds/playwright-userauth-api-suite](https://github.com/aks-builds/playwright-userauth-api-suite)
-5. 🔒 Closed issue [#2](https://github.com/aks-builds/ai-test-failure-analyzer/issues/2) in [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
-6. 🔒 Closed issue [#1](https://github.com/aks-builds/ai-test-failure-analyzer/issues/1) in [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
-7. 🎉 Created repository [aks-builds/playwright-userauth-api-suite](https://github.com/aks-builds/playwright-userauth-api-suite)
-8. 🎉 Created repository [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
-9. ⬆️ Pushed to [aks-builds/Hitro](https://github.com/aks-builds/Hitro)
-10. 🎉 Created repository [aks-builds/Hitro](https://github.com/aks-builds/Hitro)
+1. 💪 Opened PR [#6](https://github.com/aks-builds/cliproof/pull/6) in [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
+2. ⬆️ Pushed to [aks-builds/Smart-Test-Data-AI-vs-Faker.js](https://github.com/aks-builds/Smart-Test-Data-AI-vs-Faker.js)
+3. ⬆️ Pushed to [aks-builds/Selenium-Automation-Ready-Prompts-with-LLM](https://github.com/aks-builds/Selenium-Automation-Ready-Prompts-with-LLM)
+4. ⬆️ Pushed to [aks-builds/awesome-owasp-security-testing](https://github.com/aks-builds/awesome-owasp-security-testing)
+5. ⬆️ Pushed to [aks-builds/playwright-userauth-api-suite](https://github.com/aks-builds/playwright-userauth-api-suite)
+6. ⬆️ Pushed to [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
+7. ⬆️ Pushed to [aks-builds/aks-builds](https://github.com/aks-builds/aks-builds)
+8. ⬆️ Pushed to [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
+9. 🔒 Closed PR [#5](https://github.com/aks-builds/cliproof/pull/5) in [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
+10. 💪 Opened PR [#5](https://github.com/aks-builds/cliproof/pull/5) in [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
 <!--END_SECTION:activity-->
 
 </details>
