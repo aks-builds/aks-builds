@@ -1,0 +1,50 @@
+name: Update profile sections
+
+# Keeps the "What I'm shipping" and "Things I code with" sections of the profile
+# README in sync with my repos — no manual edits needed. Activity + snake are
+# handled by their own workflows.
+
+on:
+  schedule:
+    - cron: "30 */6 * * *"     # every 6h, offset 30m from the activity workflow
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/update_profile.py"
+      - ".github/workflows/profile-sections.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-readme        # avoid overlapping runs racing on README.md
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Regenerate dynamic sections
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/update_profile.py
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain README.md)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git pull --rebase --autostash origin main || true
+            git commit -m "chore(profile): auto-update shipping & languages sections"
+            git push
+          else
+            echo "No changes to commit."
+          fi

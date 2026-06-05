@@ -22,52 +22,57 @@
 
 <img src="https://img.shields.io/badge/▎_What_I'm_shipping-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
 
+<!-- SHIPPING:START -->
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4>🤖 <a href="https://github.com/aks-builds/ai-test-failure-analyzer">ai-test-failure-analyzer</a></h4>
-      MCP server — reads failing tests, scans git history, and produces ranked root-cause hypotheses in seconds.
+      <h4>🛡️ <a href="https://github.com/aks-builds/clausa">clausa</a></h4>
+      Local-first, privacy-first AI that decodes any insurance policy into plain English — coverage, exclusions, gaps, and the questions to ask.
     </td>
     <td width="50%" valign="top">
+      <h4>🤖 <a href="https://github.com/aks-builds/ai-test-failure-analyzer">ai-test-failure-analyzer</a></h4>
+      MCP server for AI-assisted QA test failure analysis. Works with Playwright, pytest, Jest/Vitest, Cypress, WebdriverIO.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h4>🎭 <a href="https://github.com/aks-builds/playwright-userauth-api-suite">playwright-userauth-api-suite</a></h4>
-      Playwright API test suite that auto-installs the analyzer on CI failure and opens a GitHub Issue.
+      Playwright API test suite for the UserAuth service; consumer of ai-test-failure-analyzer
+    </td>
+    <td width="50%" valign="top">
+      <h4>📋 <a href="https://github.com/aks-builds/openspecpm">openspecpm</a></h4>
+      Spec-driven, BDD-shaped project management for AI agents. OpenSpec proposals → BDD specs → tracked work in GitHub / Azure    DevOps / Jira / Linear / GitLab.
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h4>🔫 <a href="https://github.com/aks-builds/Hitro">Hitro</a></h4>
-      Local-first desktop API client — REST, gRPC, GraphQL, Kafka, WebSocket, SQS, MQTT + built-in mock server.
+      A local-first desktop API client built with Electron + React, supporting REST, gRPC, GraphQL, WebSocket, Kafka, AWS SQS, MQTT, SSE, and Socket.IO — with built-in mock server, load testing, request chaining, and response snapshot testing.
     </td>
     <td width="50%" valign="top">
-      <h4>🔐 <a href="https://github.com/aks-builds/awesome-owasp-security-testing">awesome-owasp-security-testing</a></h4>
-      Curated OWASP toolkit — DAST, SAST, SCA, secret scanning, IaC scanning, threat modeling, DevSecOps.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>📋 <a href="https://github.com/aks-builds/openspecpm">openspecpm</a></h4>
-      Spec-driven BDD project management for AI agents — OpenSpec → BDD specs → GitHub / Jira / Linear.
-    </td>
-    <td width="50%" valign="top">
-      <h4>🏆 <a href="https://github.com/aks-builds/quality-skills">quality-skills</a></h4>
-      50 production-focused QE skills for automation engineers, SDETs, and test leads.
+      <h4>🛠️ <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
+      —
     </td>
   </tr>
 </table>
+<!-- SHIPPING:END -->
 
 ---
 
 <img src="https://img.shields.io/badge/▎_Things_I_code_with-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="22" alt="laptop"/>&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" width="22" alt="fire"/>
 
+<!-- LANGS:START -->
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![ShaderLab](https://img.shields.io/badge/ShaderLab-58A6FF?style=for-the-badge)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Shell](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Unity](https://img.shields.io/badge/Unity-FFFFFF?style=for-the-badge&logo=unity&logoColor=black)
+<!-- LANGS:END -->
 
 ---
 
