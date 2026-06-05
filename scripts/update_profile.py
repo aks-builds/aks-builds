@@ -18,6 +18,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime, timedelta, timezone
 
 USER = "aks-builds"
 SHIP_COUNT = 6                      # repos shown in "What I'm shipping" (keeps a 2x3 grid)
@@ -31,6 +32,10 @@ TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
 
 SHIP_START, SHIP_END = "<!-- SHIPPING:START -->", "<!-- SHIPPING:END -->"
 LANG_START, LANG_END = "<!-- LANGS:START -->", "<!-- LANGS:END -->"
+# Reuse the activity markers already in the README (previously fed by an action).
+ACT_START, ACT_END = "<!--START_SECTION:activity-->", "<!--END_SECTION:activity-->"
+ACT_COUNT = 10                      # lines in "Recent GitHub Activity"
+NEW_REPO_DAYS = 30                  # how recently a repo counts as "just created"
 
 
 def gh(path):
@@ -166,6 +171,81 @@ def build_langs(repos):
     return "\n".join(badge(lang) for lang in order)
 
 
+# --- recent activity (includes pushes + new repos, unlike the old action) ----
+
+def _ts(s):
+    return datetime.strptime(s, "%Y-%m-%dT%H:%M:%SZ")
+
+
+def _repo_link(full_name):
+    return f"[{full_name}](https://github.com/{full_name})"
+
+
+def build_activity(repos, events):
+    """Merge recently-created repos with the public events feed into a single
+    'what I've been up to' list. New repos are sourced from the repos API (the
+    events feed lags for fresh pushes), so a just-shipped repo always appears."""
+    now = datetime.now(timezone.utc).replace(tzinfo=None)  # naive UTC to match _ts()
+    cutoff = now - timedelta(days=NEW_REPO_DAYS)
+    entries = []  # (datetime, text)
+
+    # 1) Freshly created repos — reliable, catches brand-new repos immediately.
+    for r in repos:
+        ca = r.get("created_at")
+        if ca and _ts(ca) >= cutoff:
+            entries.append((_ts(ca), f"🎉 Created repository {_repo_link(r['full_name'])}"))
+
+    # 2) Public events (newest first).
+    for e in events:
+        try:
+            t = _ts(e["created_at"])
+        except Exception:
+            continue
+        typ, repo, pl = e.get("type"), e["repo"]["name"], e.get("payload", {})
+        txt = None
+        if typ == "PushEvent":
+            txt = f"⬆️ Pushed to {_repo_link(repo)}"
+        elif typ == "PullRequestEvent":
+            n = pl.get("number")
+            pr = pl.get("pull_request") or {}
+            url = pr.get("html_url") or f"https://github.com/{repo}/pull/{n}"
+            act = pl.get("action")
+            if act == "opened":
+                txt = f"💪 Opened PR [#{n}]({url}) in {_repo_link(repo)}"
+            elif act == "closed" and pr.get("merged"):
+                txt = f"🎉 Merged PR [#{n}]({url}) in {_repo_link(repo)}"
+            elif act == "closed":
+                txt = f"🔒 Closed PR [#{n}]({url}) in {_repo_link(repo)}"
+        elif typ == "IssuesEvent":
+            iss = pl.get("issue") or {}
+            n, url, act = iss.get("number"), iss.get("html_url"), pl.get("action")
+            if act == "opened":
+                txt = f"🐛 Opened issue [#{n}]({url}) in {_repo_link(repo)}"
+            elif act == "closed":
+                txt = f"🔒 Closed issue [#{n}]({url}) in {_repo_link(repo)}"
+        elif typ == "ReleaseEvent":
+            rel = pl.get("release") or {}
+            txt = f"🏷️ Released {rel.get('tag_name', '')} in {_repo_link(repo)}"
+        elif typ == "ForkEvent":
+            txt = f"🍴 Forked {_repo_link(repo)}"
+        elif typ == "CreateEvent" and pl.get("ref_type") == "repository":
+            txt = f"🎉 Created repository {_repo_link(repo)}"
+        if txt:
+            entries.append((t, txt))
+
+    # newest first, drop duplicate texts (collapses repeated pushes to one line)
+    entries.sort(key=lambda x: x[0], reverse=True)
+    seen, lines = set(), []
+    for _t, txt in entries:
+        if txt in seen:
+            continue
+        seen.add(txt)
+        lines.append(f"{len(lines) + 1}. {txt}")
+        if len(lines) >= ACT_COUNT:
+            break
+    return "\n".join(lines)
+
+
 def replace_block(text, start, end, content):
     pat = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
     if not pat.search(text):
@@ -186,10 +266,17 @@ def main():
     text = replace_block(text, SHIP_START, SHIP_END, build_shipping(ship_repos))
     text = replace_block(text, LANG_START, LANG_END, build_langs(repos))
 
+    try:
+        events = gh(f"/users/{USER}/events/public?per_page=100")
+    except urllib.error.HTTPError:
+        events = []
+    text = replace_block(text, ACT_START, ACT_END, build_activity(repos, events))
+
     with open(README, "w", encoding="utf-8", newline="\n") as f:
         f.write(text)
-    print(f"Updated README.md: {min(len(repos), SHIP_COUNT)} shipping repos, "
-          f"{len(repos)} repos scanned for languages.")
+    print(f"Updated README.md: {min(len(ship_repos), SHIP_COUNT)} shipping repos, "
+          f"{len(repos)} repos scanned for languages, activity from "
+          f"{len(events)} events + new repos.")
 
 
 if __name__ == "__main__":
