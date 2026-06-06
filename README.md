@@ -26,6 +26,16 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <h4>🧪 <a href="https://github.com/aks-builds/reqweave">reqweave</a></h4>
+      Read your service code; generate ready-to-import API collections for every testing tool (Postman, OpenAPI, Insomnia, Bruno, Hoppscotch, Thunder Client, .http) with exhaustive request variants.
+    </td>
+    <td width="50%" valign="top">
+      <h4>🧪 <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
+      Reusable GitHub Actions workflows and automation scripts I share across my repositories.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h4>🛡️ <a href="https://github.com/aks-builds/cliproof">cliproof</a></h4>
       Prove your CLI actually works. A Claude Code skill that captures a real terminal command and its real output as a polished screenshot or GIF — secrets redacted, command-guarded — and embeds it into your README as proof-it-runs evidence.
     </td>
@@ -44,16 +54,6 @@
       A curated list of OWASP projects, standards, and companion open-source tools for security testing of web apps, APIs, mobile apps, and supporting infrastructure — covering DAST, SAST, SCA/SBOM, secret scanning, IaC scanning, threat modeling, and DevSecOps.
     </td>
   </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>🎭 <a href="https://github.com/aks-builds/playwright-userauth-api-suite">playwright-userauth-api-suite</a></h4>
-      Playwright API test suite for the UserAuth service; consumer of ai-test-failure-analyzer
-    </td>
-    <td width="50%" valign="top">
-      <h4>🤖 <a href="https://github.com/aks-builds/ai-test-failure-analyzer">ai-test-failure-analyzer</a></h4>
-      MCP server for AI-assisted QA test failure analysis. Works with Playwright, pytest, Jest/Vitest, Cypress, WebdriverIO.
-    </td>
-  </tr>
 </table>
 <!-- SHIPPING:END -->
 
@@ -67,8 +67,8 @@
 ![C#](https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=csharp&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![ShaderLab](https://img.shields.io/badge/ShaderLab-58A6FF?style=for-the-badge)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
+![ShaderLab](https://img.shields.io/badge/ShaderLab-58A6FF?style=for-the-badge)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Shell](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 ![Unity](https://img.shields.io/badge/Unity-FFFFFF?style=for-the-badge&logo=unity&logoColor=black)
@@ -135,16 +135,16 @@
 <br/>
 
 <!--START_SECTION:activity-->
-1. 💪 Opened PR [#6](https://github.com/aks-builds/cliproof/pull/6) in [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
-2. ⬆️ Pushed to [aks-builds/Smart-Test-Data-AI-vs-Faker.js](https://github.com/aks-builds/Smart-Test-Data-AI-vs-Faker.js)
-3. ⬆️ Pushed to [aks-builds/Selenium-Automation-Ready-Prompts-with-LLM](https://github.com/aks-builds/Selenium-Automation-Ready-Prompts-with-LLM)
-4. ⬆️ Pushed to [aks-builds/awesome-owasp-security-testing](https://github.com/aks-builds/awesome-owasp-security-testing)
-5. ⬆️ Pushed to [aks-builds/playwright-userauth-api-suite](https://github.com/aks-builds/playwright-userauth-api-suite)
-6. ⬆️ Pushed to [aks-builds/ai-test-failure-analyzer](https://github.com/aks-builds/ai-test-failure-analyzer)
-7. ⬆️ Pushed to [aks-builds/aks-builds](https://github.com/aks-builds/aks-builds)
-8. ⬆️ Pushed to [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
-9. 🔒 Closed PR [#5](https://github.com/aks-builds/cliproof/pull/5) in [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
-10. 💪 Opened PR [#5](https://github.com/aks-builds/cliproof/pull/5) in [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
+1. ⬆️ Pushed to [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+2. 💪 Opened PR [#7](https://github.com/aks-builds/reqweave/pull/7) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+3. 💪 Opened PR [#6](https://github.com/aks-builds/reqweave/pull/6) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+4. ⬆️ Pushed to [aks-builds/workflows](https://github.com/aks-builds/workflows)
+5. 💪 Opened PR [#3](https://github.com/aks-builds/workflows/pull/3) in [aks-builds/workflows](https://github.com/aks-builds/workflows)
+6. 💪 Opened PR [#5](https://github.com/aks-builds/reqweave/pull/5) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+7. 🎉 Created repository [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+8. 💪 Opened PR [#2](https://github.com/aks-builds/workflows/pull/2) in [aks-builds/workflows](https://github.com/aks-builds/workflows)
+9. ⬆️ Pushed to [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
+10. 💪 Opened PR [#8](https://github.com/aks-builds/cliproof/pull/8) in [aks-builds/cliproof](https://github.com/aks-builds/cliproof)
 <!--END_SECTION:activity-->
 
 </details>
