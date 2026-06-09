@@ -26,32 +26,32 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <h4>🔫 <a href="https://github.com/aks-builds/Hitro">Hitro</a></h4>
+      A local-first desktop API client built with Electron + React, supporting REST, gRPC, GraphQL, WebSocket, Kafka, AWS SQS, MQTT, SSE, and Socket.IO — with built-in mock server, load testing, request chaining, and response snapshot testing.
+    </td>
+    <td width="50%" valign="top">
       <h4>🧪 <a href="https://github.com/aks-builds/reqweave">reqweave</a></h4>
       Read your service code; generate ready-to-import API collections for every testing tool (Postman, OpenAPI, Insomnia, Bruno, Hoppscotch, Thunder Client, .http) with exhaustive request variants.
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h4>🧪 <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
       Reusable GitHub Actions workflows and automation scripts I share across my repositories.
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h4>🛡️ <a href="https://github.com/aks-builds/cliproof">cliproof</a></h4>
       Prove your CLI actually works. A Claude Code skill that captures a real terminal command and its real output as a polished screenshot or GIF — secrets redacted, command-guarded — and embeds it into your README as proof-it-runs evidence.
     </td>
+  </tr>
+  <tr>
     <td width="50%" valign="top">
       <h4>🤖 <a href="https://github.com/aks-builds/Smart-Test-Data-AI-vs-Faker.js">Smart-Test-Data-AI-vs-Faker.js</a></h4>
       Companion code for my talk 'Smart Test Data — Faker vs AI' (NashKnolX): generating realistic test data with LLMs vs Faker.js.
     </td>
-  </tr>
-  <tr>
     <td width="50%" valign="top">
       <h4>🤖 <a href="https://github.com/aks-builds/Selenium-Automation-Ready-Prompts-with-LLM">Selenium-Automation-Ready-Prompts-with-LLM</a></h4>
       Ready-to-use LLM prompts for generating production-grade Selenium test automation.
-    </td>
-    <td width="50%" valign="top">
-      <h4>🔐 <a href="https://github.com/aks-builds/awesome-owasp-security-testing">awesome-owasp-security-testing</a></h4>
-      A curated list of OWASP projects, standards, and companion open-source tools for security testing of web apps, APIs, mobile apps, and supporting infrastructure — covering DAST, SAST, SCA/SBOM, secret scanning, IaC scanning, threat modeling, and DevSecOps.
     </td>
   </tr>
 </table>
@@ -135,16 +135,16 @@
 <br/>
 
 <!--START_SECTION:activity-->
-1. ⬆️ Pushed to [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-2. 💪 Opened PR [#28](https://github.com/aks-builds/reqweave/pull/28) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-3. 💪 Opened PR [#27](https://github.com/aks-builds/reqweave/pull/27) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-4. 💪 Opened PR [#26](https://github.com/aks-builds/reqweave/pull/26) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-5. 💪 Opened PR [#25](https://github.com/aks-builds/reqweave/pull/25) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-6. 💪 Opened PR [#24](https://github.com/aks-builds/reqweave/pull/24) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-7. 💪 Opened PR [#23](https://github.com/aks-builds/reqweave/pull/23) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-8. 💪 Opened PR [#22](https://github.com/aks-builds/reqweave/pull/22) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-9. 💪 Opened PR [#21](https://github.com/aks-builds/reqweave/pull/21) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
-10. 💪 Opened PR [#20](https://github.com/aks-builds/reqweave/pull/20) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+1. ⬆️ Pushed to [aks-builds/Hitro](https://github.com/aks-builds/Hitro)
+2. 💪 Opened PR [#1](https://github.com/aks-builds/Hitro/pull/1) in [aks-builds/Hitro](https://github.com/aks-builds/Hitro)
+3. ⬆️ Pushed to [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+4. 💪 Opened PR [#28](https://github.com/aks-builds/reqweave/pull/28) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+5. 💪 Opened PR [#27](https://github.com/aks-builds/reqweave/pull/27) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+6. 💪 Opened PR [#26](https://github.com/aks-builds/reqweave/pull/26) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+7. 💪 Opened PR [#25](https://github.com/aks-builds/reqweave/pull/25) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+8. 💪 Opened PR [#24](https://github.com/aks-builds/reqweave/pull/24) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+9. 💪 Opened PR [#23](https://github.com/aks-builds/reqweave/pull/23) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
+10. 💪 Opened PR [#22](https://github.com/aks-builds/reqweave/pull/22) in [aks-builds/reqweave](https://github.com/aks-builds/reqweave)
 <!--END_SECTION:activity-->
 
 </details>
