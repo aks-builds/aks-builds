@@ -60,66 +60,47 @@
 <text x="20" y="220" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#22c55e">~<animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="2.0s" fill="freeze"/></text>
 <text x="52" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#e2e8f0"><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.1s" fill="freeze"/>l</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.155s" fill="freeze"/>s</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.21s" fill="freeze"/> </tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.265s" fill="freeze"/>-</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.32s" fill="freeze"/>l</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.375s" fill="freeze"/>a</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.43s" fill="freeze"/> </tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.485s" fill="freeze"/>.</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.54s" fill="freeze"/>/</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.595s" fill="freeze"/>p</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.65s" fill="freeze"/>r</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.705s" fill="freeze"/>o</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.76s" fill="freeze"/>j</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.815s" fill="freeze"/>e</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.87s" fill="freeze"/>c</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.925s" fill="freeze"/>t</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="2.98s" fill="freeze"/>s</tspan><tspan opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="3.035s" fill="freeze"/>/</tspan></text>
 <!-- PROJECTS_START -->
-<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.4s" fill="freeze"/>
-<text x="20" y="246" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
-<text x="120" y="246" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">cliproof</text>
-<rect x="184" y="234" width="44" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="190" y="245" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Python</text>
-<rect x="232" y="234" width="28" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="238" y="245" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
-<rect x="264" y="234" width="30" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="270" y="245" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">MCP</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.54s" fill="freeze"/>
-<text x="20" y="268" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
-<text x="120" y="268" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">ai-test-failure-analyzer</text>
-<rect x="296" y="256" width="44" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="302" y="267" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Python</text>
-<rect x="344" y="256" width="22" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="350" y="267" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">AI</text>
-<rect x="370" y="256" width="28" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="376" y="267" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.68s" fill="freeze"/>
-<text x="20" y="290" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
-<text x="120" y="290" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">openspecpm</text>
-<rect x="198" y="278" width="20" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="204" y="289" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">JS</text>
-<rect x="222" y="278" width="28" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="228" y="289" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
-<rect x="254" y="278" width="28" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="260" y="289" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">BDD</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.82s" fill="freeze"/>
-<text x="20" y="312" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
-<text x="120" y="312" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">Hitro</text>
-<rect x="163" y="300" width="72" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="169" y="311" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">TypeScript</text>
-<rect x="239" y="300" width="56" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="245" y="311" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Electron</text>
-<rect x="299" y="300" width="36" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="305" y="311" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">React</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.96s" fill="freeze"/>
-<text x="20" y="334" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
-<text x="120" y="334" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">reqweave</text>
-<rect x="184" y="322" width="72" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="190" y="333" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">TypeScript</text>
-<rect x="260" y="322" width="50" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="266" y="333" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">OpenAPI</text>
-</g>
-<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="4.1s" fill="freeze"/>
-<text x="20" y="356" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
-<text x="120" y="356" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">quality-skills</text>
-<rect x="226" y="344" width="44" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="232" y="355" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Claude</text>
-<rect x="274" y="344" width="22" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
-<text x="280" y="355" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">QA</text>
-</g>
-<text x="20" y="374" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d" opacity="0">
-  <animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="4.24s" fill="freeze"/>
-  +9 more &#x2192; github.com/aks-builds
-</text>
+  <text x="20" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">aks-builds.github.io</text>
+  <rect x="270" y="209" width="36" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="276" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">HTML</text>
+  <text x="20" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">cliproof</text>
+  <rect x="186" y="227" width="48" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="192" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Python</text>
+  <rect x="238" y="227" width="30" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="244" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
+  <rect x="272" y="227" width="30" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="278" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">MCP</text>
+  <text x="20" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">ai-test-failure-analyzer</text>
+  <rect x="298" y="245" width="48" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="304" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Python</text>
+  <rect x="350" y="245" width="30" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="356" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
+  <rect x="384" y="245" width="24" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="390" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">AI</text>
+  <text x="20" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">playwright-userauth-api-suite</text>
+  <rect x="333" y="263" width="72" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="339" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">TypeScript</text>
+  <rect x="409" y="263" width="72" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="415" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Playwright</text>
+  <text x="20" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">Hitro</text>
+  <rect x="165" y="281" width="72" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="171" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">TypeScript</text>
+  <rect x="241" y="281" width="60" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="247" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Electron</text>
+  <rect x="305" y="281" width="42" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="311" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">React</text>
+  <text x="20" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">reqweave</text>
+  <rect x="186" y="299" width="72" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="192" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">TypeScript</text>
+  <rect x="262" y="299" width="54" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="268" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">OpenAPI</text>
+  <text x="20" y="332" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">+10 more → github.com/aks-builds</text>
 <!-- PROJECTS_END -->
 <rect x="20" y="396" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="4.75s" fill="freeze"/>
