@@ -85,9 +85,9 @@
 
 <br/>
 
-  <a href="https://www.npmjs.com/package/ai-test-failure-analyzer"><img src="https://img.shields.io/npm/v/ai-test-failure-analyzer?style=flat-square&logo=npm&labelColor=1a1a2e&color=CB3837&label=ai-test-failure-analyzer" alt="ai-test-failure-analyzer"/></a>
-  <a href="https://www.npmjs.com/package/cliproof"><img src="https://img.shields.io/npm/v/cliproof?style=flat-square&logo=npm&labelColor=1a1a2e&color=CB3837&label=cliproof" alt="cliproof"/></a>
-  <a href="https://www.npmjs.com/package/openspecpm"><img src="https://img.shields.io/npm/v/openspecpm?style=flat-square&logo=npm&labelColor=1a1a2e&color=CB3837&label=openspecpm" alt="openspecpm"/></a>
+  <a href="git+https://github.com/aks-builds/ai-test-failure-analyzer.git"><img src="https://img.shields.io/static/v1?label=&message=ai-test-failure-analyzer&style=flat-square&color=1a1a2e&logo=npm&logoColor=white&labelColor=1a1a2e" alt="ai-test-failure-analyzer"/></a><a href="https://www.npmjs.com/package/ai-test-failure-analyzer"><img src="https://img.shields.io/npm/v/ai-test-failure-analyzer?style=flat-square&color=CB3837&label=" alt="ai-test-failure-analyzer version"/></a>
+  <a href="git+https://github.com/aks-builds/cliproof.git"><img src="https://img.shields.io/static/v1?label=&message=cliproof&style=flat-square&color=1a1a2e&logo=npm&logoColor=white&labelColor=1a1a2e" alt="cliproof"/></a><a href="https://www.npmjs.com/package/cliproof"><img src="https://img.shields.io/npm/v/cliproof?style=flat-square&color=CB3837&label=" alt="cliproof version"/></a>
+  <a href="git+https://github.com/aks-builds/openspecpm.git"><img src="https://img.shields.io/static/v1?label=&message=openspecpm&style=flat-square&color=1a1a2e&logo=npm&logoColor=white&labelColor=1a1a2e" alt="openspecpm"/></a><a href="https://www.npmjs.com/package/openspecpm"><img src="https://img.shields.io/npm/v/openspecpm?style=flat-square&color=CB3837&label=" alt="openspecpm version"/></a>
 
 </div>
 <!--END_SECTION:npm-packages-->
