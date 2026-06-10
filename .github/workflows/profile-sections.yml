@@ -1,24 +1,25 @@
-name: Update profile sections
+name: Regenerate terminal SVG
 
-# Keeps the "What I'm shipping" and "Things I code with" sections of the profile
-# README in sync with my repos — no manual edits needed. Activity + snake are
-# handled by their own workflows.
+# Keeps the dynamic sections of terminal-session.svg in sync with live repo data:
+#   - Project rows (top-6 non-fork repos by push date)
+#   - Stack chips (aggregated languages across all repos)
+# Snake + activity handled by their own workflows.
 
 on:
   schedule:
-    - cron: "30 */6 * * *"     # every 6h, offset 30m from the activity workflow
+    - cron: "30 */6 * * *"     # every 6h
   workflow_dispatch:
   push:
     branches: [main]
     paths:
-      - "scripts/update_profile.py"
+      - "scripts/generate_terminal_svg.py"
       - ".github/workflows/profile-sections.yml"
 
 permissions:
   contents: write
 
 concurrency:
-  group: profile-readme        # avoid overlapping runs racing on README.md
+  group: profile-readme
   cancel-in-progress: false
 
 jobs:
@@ -31,19 +32,19 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Regenerate dynamic sections
+      - name: Regenerate terminal SVG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/update_profile.py
+        run: python scripts/generate_terminal_svg.py
 
       - name: Commit if changed
         run: |
-          if [ -n "$(git status --porcelain README.md)" ]; then
+          if [ -n "$(git status --porcelain terminal-session.svg)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md
+            git add terminal-session.svg
             git pull --rebase --autostash origin main || true
-            git commit -m "chore(profile): auto-update shipping & languages sections"
+            git commit -m "chore(profile): regenerate terminal SVG"
             git push
           else
             echo "No changes to commit."

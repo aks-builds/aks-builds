@@ -1,0 +1,428 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="980" viewBox="0 0 820 980">
+<defs>
+
+  <!-- ── COMMAND REVEAL CLIPS ── -->
+  <clipPath id="c-whoami">
+    <rect x="52" y="52" height="18" width="0">
+      <animate attributeName="width" from="0" to="90" dur="0.4s" begin="0.3s" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <clipPath id="c-projects">
+    <rect x="52" y="186" height="18" width="0">
+      <animate attributeName="width" from="0" to="170" dur="0.6s" begin="3.0s" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <clipPath id="c-npm">
+    <rect x="52" y="336" height="18" width="0">
+      <animate attributeName="width" from="0" to="210" dur="0.6s" begin="6.5s" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <clipPath id="c-talks">
+    <rect x="52" y="456" height="18" width="0">
+      <animate attributeName="width" from="0" to="200" dur="0.6s" begin="9.0s" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <clipPath id="c-stack">
+    <rect x="52" y="596" height="18" width="0">
+      <animate attributeName="width" from="0" to="160" dur="0.5s" begin="11.5s" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <clipPath id="c-stats">
+    <rect x="52" y="700" height="18" width="0">
+      <animate attributeName="width" from="0" to="240" dur="0.6s" begin="13.5s" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <clipPath id="c-echo">
+    <rect x="52" y="790" height="18" width="0">
+      <animate attributeName="width" from="0" to="160" dur="0.4s" begin="15.5s" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+</defs>
+
+<!-- ════════════════════════════
+     WINDOW CHROME
+════════════════════════════ -->
+<!-- Outer frame -->
+<rect width="820" height="980" rx="10" fill="#0a0a0a"/>
+<rect width="820" height="980" rx="10" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+
+<!-- Title bar -->
+<rect width="820" height="38" rx="10" fill="#111111"/>
+<rect y="28" width="820" height="10" fill="#111111"/>
+<rect y="38" width="820" height="1" fill="#1c1c1c"/>
+
+<!-- Dots -->
+<circle cx="20" cy="19" r="6" fill="#ef4444"/>
+<circle cx="38" cy="19" r="6" fill="#f59e0b"/>
+<circle cx="56" cy="19" r="6" fill="#22c55e"/>
+
+<!-- Title -->
+<text x="410" y="24" text-anchor="middle"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="11" fill="#3f3f46" letter-spacing="0.04em">aditya@github — zsh — 120×40</text>
+
+
+<!-- ════════════════════════════
+     SECTION 1 — whoami
+════════════════════════════ -->
+<!-- Prompt -->
+<text x="20" y="64"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~</text>
+<text x="36" y="64"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#52525b">  </text>
+<text x="52" y="64" clip-path="url(#c-whoami)"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#e2e8f0">whoami</text>
+
+<!-- Output: name + role + badge + links -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.8s" fill="freeze"/>
+
+  <!-- Name -->
+  <text x="20" y="100"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="32" font-weight="600" letter-spacing="-0.02em" fill="#fafafa">Aditya S.</text>
+
+  <!-- Role -->
+  <text x="20" y="122"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="12" fill="#52525b" letter-spacing="0.06em">// Cloud Native Quality Engineer</text>
+
+  <!-- Available dot -->
+  <circle cx="20" cy="140" r="4" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0.3;1" dur="2s" begin="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="30" y="144"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#22c55e" letter-spacing="0.07em">HIREABLE · open to new opportunities</text>
+
+  <!-- Links row -->
+  <text x="20" y="162"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#3f3f46">work</text>
+  <text x="58" y="162"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#3b82f6">nashtechglobal.com</text>
+  <text x="220" y="162"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#3f3f46">li</text>
+  <text x="240" y="162"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#3b82f6">linkedin.com/in/its-aks</text>
+  <text x="430" y="162"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#3f3f46">npm</text>
+  <text x="462" y="162"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="10" fill="#3b82f6">npmjs.com/~aks-builds</text>
+</g>
+
+<!-- Divider 1 -->
+<rect x="20" y="172" width="780" height="1" fill="#161616" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="2.8s" fill="freeze"/>
+</rect>
+
+
+<!-- ════════════════════════════
+     SECTION 2 — ls projects
+════════════════════════════ -->
+<!-- Prompt -->
+<text x="20" y="198" opacity="0"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="2.9s" fill="freeze"/>
+</text>
+<text x="52" y="198" clip-path="url(#c-projects)"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#e2e8f0">ls -la ./projects/</text>
+
+<!-- Output rows — PROJECTS_ROWS -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="3.7s" fill="freeze"/>
+
+  <!-- PROJECTS_START -->
+  <!-- Row 1 -->
+  <text x="20" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">cliproof</text>
+  <rect x="256" y="209" width="38" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="262" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Python</text>
+  <rect x="298" y="209" width="26" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="304" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
+  <rect x="328" y="209" width="28" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="334" y="220" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">MCP</text>
+
+  <!-- Row 2 -->
+  <text x="20" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">ai-test-failure-analyzer</text>
+  <rect x="382" y="227" width="38" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="388" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Python</text>
+  <rect x="424" y="227" width="20" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="430" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">AI</text>
+  <rect x="448" y="227" width="26" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="454" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
+
+  <!-- Row 3 -->
+  <text x="20" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">openspecpm</text>
+  <rect x="242" y="245" width="18" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="248" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">JS</text>
+  <rect x="264" y="245" width="26" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="270" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
+  <rect x="294" y="245" width="26" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="300" y="256" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">BDD</text>
+
+  <!-- Row 4 -->
+  <text x="20" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">Hitro</text>
+  <rect x="178" y="263" width="68" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="184" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">TypeScript</text>
+  <rect x="250" y="263" width="52" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="256" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Electron</text>
+  <rect x="306" y="263" width="34" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="312" y="274" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">React</text>
+
+  <!-- Row 5 -->
+  <text x="20" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">reqweave</text>
+  <rect x="216" y="281" width="68" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="222" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">TypeScript</text>
+  <rect x="288" y="281" width="44" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="294" y="292" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">OpenAPI</text>
+
+  <!-- Row 6 -->
+  <text x="20" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">drwxr-xr-x</text>
+  <text x="120" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">quality-skills</text>
+  <rect x="252" y="299" width="40" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="258" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Claude</text>
+  <rect x="296" y="299" width="20" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="302" y="310" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">QA</text>
+
+  <text x="20" y="326" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">+9 more → github.com/aks-builds</text>
+  <!-- PROJECTS_END -->
+</g>
+
+<!-- Divider 2 -->
+<rect x="20" y="332" width="780" height="1" fill="#161616" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="6.3s" fill="freeze"/>
+</rect>
+
+
+<!-- ════════════════════════════
+     SECTION 3 — npm
+════════════════════════════ -->
+<text x="20" y="348" opacity="0"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="6.4s" fill="freeze"/>
+</text>
+<text x="52" y="348" clip-path="url(#c-npm)"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#e2e8f0">cat ./npm/install.sh</text>
+
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.2s" fill="freeze"/>
+
+  <!-- npm box border -->
+  <rect x="20" y="356" width="780" height="88" rx="4" fill="none" stroke="#1c1c1c"/>
+
+  <!-- npm rows -->
+  <text x="34" y="376" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#22c55e">$</text>
+  <text x="50" y="376" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#e2e8f0">npm install -g cliproof</text>
+  <text x="400" y="376" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">→ terminal screenshot proof tool</text>
+
+  <text x="34" y="400" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#22c55e">$</text>
+  <text x="50" y="400" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#e2e8f0">npm install -g ai-test-failure-analyzer</text>
+  <text x="400" y="400" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">→ AI-powered test root-cause</text>
+
+  <text x="34" y="424" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#22c55e">$</text>
+  <text x="50" y="424" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#e2e8f0">npm install -g openspecpm</text>
+  <text x="400" y="424" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">→ BDD project management for AI agents</text>
+</g>
+
+<!-- Divider 3 -->
+<rect x="20" y="452" width="780" height="1" fill="#161616" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="8.8s" fill="freeze"/>
+</rect>
+
+
+<!-- ════════════════════════════
+     SECTION 4 — talks
+════════════════════════════ -->
+<text x="20" y="468" opacity="0"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="8.9s" fill="freeze"/>
+</text>
+<text x="52" y="468" clip-path="url(#c-talks)"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#e2e8f0">ls ./talks/ --sort=date</text>
+
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="9.7s" fill="freeze"/>
+
+  <!-- Talk rows -->
+  <text x="20" y="490" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">2024</text>
+  <text x="72" y="490" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#fafafa">Smart Test Data — Faker vs AI</text>
+  <text x="560" y="490" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#22c55e">NashKnolX ↗</text>
+
+  <text x="20" y="510" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">2024</text>
+  <text x="72" y="510" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#fafafa">Testing Event-Driven Architecture</text>
+  <text x="560" y="510" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#22c55e">NashKnolX ↗</text>
+
+  <text x="20" y="530" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">2024</text>
+  <text x="72" y="530" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#fafafa">Clean Code in Test Automation</text>
+  <text x="560" y="530" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#22c55e">NashKnolX ↗</text>
+
+  <!-- Upcoming -->
+  <text x="20" y="552" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#f59e0b">SOON</text>
+  <text x="72" y="552" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#f59e0b">AI-Assisted Test Failure Analysis</text>
+  <rect x="490" y="540" width="130" height="16" rx="2" fill="none" stroke="rgba(245,158,11,0.3)"/>
+  <text x="498" y="552" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#f59e0b" letter-spacing="0.04em">Jun 19 2026 · NashLearn</text>
+</g>
+
+<!-- Divider 4 -->
+<rect x="20" y="582" width="780" height="1" fill="#161616" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="11.3s" fill="freeze"/>
+</rect>
+
+
+<!-- ════════════════════════════
+     SECTION 5 — stack
+════════════════════════════ -->
+<text x="20" y="608" opacity="0"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="11.4s" fill="freeze"/>
+</text>
+<text x="52" y="608" clip-path="url(#c-stack)"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#e2e8f0">cat ./stack.txt</text>
+
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="12.1s" fill="freeze"/>
+
+  <!-- STACK_START -->
+  <!-- Stack chips row 1 -->
+  <rect x="20" y="618" width="48" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="26" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Python</text>
+  <rect x="74" y="618" width="66" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="80" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">TypeScript</text>
+  <rect x="146" y="618" width="22" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="152" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">C#</text>
+  <rect x="174" y="618" width="66" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="180" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">JavaScript</text>
+  <rect x="246" y="618" width="62" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="252" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">PowerShell</text>
+  <rect x="314" y="618" width="32" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="320" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Bash</text>
+
+  <!-- Stack chips row 2 -->
+  <rect x="20" y="640" width="60" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="26" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Playwright</text>
+  <rect x="86" y="640" width="52" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="92" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Selenium</text>
+  <rect x="144" y="640" width="72" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="150" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#22c55e">Claude Code</text>
+  <rect x="222" y="640" width="30" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="228" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#22c55e">MCP</text>
+  <rect x="258" y="640" width="40" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="264" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Docker</text>
+  <rect x="304" y="640" width="96" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="310" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">GitHub Actions</text>
+  <rect x="406" y="640" width="44" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="412" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Electron</text>
+  <rect x="456" y="640" width="34" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="462" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">React</text>
+  <rect x="496" y="640" width="36" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
+  <text x="502" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Unity</text>
+  <!-- STACK_END -->
+</g>
+
+<!-- Divider 5 -->
+<rect x="20" y="672" width="780" height="1" fill="#161616" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="13.3s" fill="freeze"/>
+</rect>
+
+
+<!-- ════════════════════════════
+     SECTION 6 — stats
+════════════════════════════ -->
+<text x="20" y="712" opacity="0"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="13.4s" fill="freeze"/>
+</text>
+<text x="52" y="712" clip-path="url(#c-stats)"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#e2e8f0">gh stats --user aks-builds</text>
+
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="14.2s" fill="freeze"/>
+
+  <!-- Stat 1 -->
+  <text x="20" y="750" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="28" font-weight="600" fill="#22c55e">16</text>
+  <text x="20" y="766" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#3f3f46" letter-spacing="0.08em">REPOS</text>
+
+  <!-- Stat 2 -->
+  <text x="130" y="750" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="28" font-weight="600" fill="#22c55e">5+</text>
+  <text x="130" y="766" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#3f3f46" letter-spacing="0.08em">NPM PACKAGES</text>
+
+  <!-- Stat 3 -->
+  <text x="260" y="750" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="28" font-weight="600" fill="#22c55e">50+</text>
+  <text x="260" y="766" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#3f3f46" letter-spacing="0.08em">AGENT SKILLS</text>
+
+  <!-- Stat 4 -->
+  <text x="400" y="750" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="28" font-weight="600" fill="#22c55e">3</text>
+  <text x="400" y="766" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#3f3f46" letter-spacing="0.08em">CONF TALKS</text>
+</g>
+
+<!-- Divider 6 -->
+<rect x="20" y="778" width="780" height="1" fill="#161616" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="15.3s" fill="freeze"/>
+</rect>
+
+
+<!-- ════════════════════════════
+     SECTION 7 — fun fact
+════════════════════════════ -->
+<text x="20" y="802" opacity="0"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="15.4s" fill="freeze"/>
+</text>
+<text x="52" y="802" clip-path="url(#c-echo)"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#e2e8f0">echo $FUN_FACT</text>
+
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="16.0s" fill="freeze"/>
+  <text x="20" y="824" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#52525b" font-style="italic">// I break things for a living, build AI to explain why</text>
+  <text x="20" y="842" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#52525b" font-style="italic">// and race F1 on weekends (simulated, sadly).</text>
+</g>
+
+
+<!-- ════════════════════════════
+     FINAL PROMPT + CURSOR
+════════════════════════════ -->
+<text x="20" y="872" opacity="0"
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+  font-size="12" fill="#22c55e">~
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="16.8s" fill="freeze"/>
+</text>
+
+<!-- Blinking cursor -->
+<rect x="52" y="858" width="8" height="16" fill="#22c55e" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="16.9s" fill="freeze"/>
+  <animate attributeName="opacity" values="1;0;1" dur="1s" begin="17s" repeatCount="indefinite"/>
+</rect>
+
+</svg>
