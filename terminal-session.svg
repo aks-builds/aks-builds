@@ -14,19 +14,19 @@
     <animate attributeName="width" from="0" to="156" dur="1.0s" begin="5.0s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c4"><rect x="52" y="578" height="18" width="0">
+  <clipPath id="c4"><rect x="52" y="566" height="20" width="0">
     <animate attributeName="width" from="0" to="180" dur="1.15s" begin="7.4s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c5"><rect x="52" y="726" height="18" width="0">
+  <clipPath id="c5"><rect x="52" y="718" height="20" width="0">
     <animate attributeName="width" from="0" to="120" dur="0.75s" begin="10.3s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c6"><rect x="52" y="834" height="18" width="0">
+  <clipPath id="c6"><rect x="52" y="826" height="20" width="0">
     <animate attributeName="width" from="0" to="200" dur="1.3s" begin="12.5s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c7"><rect x="52" y="948" height="18" width="0">
+  <clipPath id="c7"><rect x="52" y="936" height="20" width="0">
     <animate attributeName="width" from="0" to="112" dur="0.72s" begin="15.8s" fill="freeze"/>
   </rect></clipPath>
 
