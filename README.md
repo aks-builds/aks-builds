@@ -1,6 +1,7 @@
 <div align="center">
 
-<a href="./terminal-session.svg" title="↻ click to replay animation">
+<!-- Clicking the image navigates back to this profile page, restarting the animation -->
+<a href="https://github.com/aks-builds">
   <img src="./terminal-session.svg" width="100%" alt="Aditya Kumar Singh — terminal session"/>
 </a>
 

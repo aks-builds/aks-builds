@@ -1,42 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="820" height="1100" viewBox="0 0 820 1100">
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="580" viewBox="0 0 820 580">
 <defs>
 
-  <!-- Command typing clips (width 0 → full, freeze) -->
-  <clipPath id="c1"><rect x="52" y="54" height="18" width="0">
+  <!-- Viewport clip — keeps scrolled content inside the terminal body -->
+  <clipPath id="vp">
+    <rect x="0" y="38" width="820" height="542"/>
+  </clipPath>
+
+  <!-- Command typing clips — rect y = text_baseline - 22, height = 28
+       Gives 22px above baseline (covers all ascenders) + 6px below (covers descenders) -->
+  <clipPath id="c1"><rect x="52" y="46" height="28" width="0">
     <animate attributeName="width" from="0" to="56" dur="0.32s" begin="0.4s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c2"><rect x="52" y="194" height="18" width="0">
+  <clipPath id="c2"><rect x="52" y="190" height="28" width="0">
     <animate attributeName="width" from="0" to="142" dur="0.88s" begin="2.2s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c3"><rect x="52" y="402" height="18" width="0">
+  <clipPath id="c3"><rect x="52" y="398" height="28" width="0">
     <animate attributeName="width" from="0" to="156" dur="1.0s" begin="5.0s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c4"><rect x="52" y="566" height="20" width="0">
+  <clipPath id="c4"><rect x="52" y="558" height="28" width="0">
     <animate attributeName="width" from="0" to="180" dur="1.15s" begin="7.4s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c5"><rect x="52" y="718" height="20" width="0">
+  <clipPath id="c5"><rect x="52" y="710" height="28" width="0">
     <animate attributeName="width" from="0" to="120" dur="0.75s" begin="10.3s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c6"><rect x="52" y="826" height="20" width="0">
+  <clipPath id="c6"><rect x="52" y="818" height="28" width="0">
     <animate attributeName="width" from="0" to="200" dur="1.3s" begin="12.5s" fill="freeze"/>
   </rect></clipPath>
 
-  <clipPath id="c7"><rect x="52" y="936" height="20" width="0">
+  <clipPath id="c7"><rect x="52" y="928" height="28" width="0">
     <animate attributeName="width" from="0" to="112" dur="0.72s" begin="15.8s" fill="freeze"/>
   </rect></clipPath>
 
 </defs>
 
 <!-- ═══════════════════════
-     WINDOW CHROME
+     WINDOW CHROME (fixed, not scrolled)
 ═══════════════════════ -->
-<rect width="820" height="1100" rx="10" fill="#0a0a0a"/>
-<rect width="820" height="1100" rx="10" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+<rect width="820" height="580" rx="10" fill="#0a0a0a"/>
 <rect width="820" height="38" rx="10" fill="#111111"/>
 <rect y="28" width="820" height="10" fill="#111111"/>
 <rect y="38" width="820" height="1" fill="#1c1c1c"/>
@@ -48,6 +53,22 @@
   font-size="11" fill="#3f3f46" letter-spacing="0.04em">aditya@github — zsh — 120×40</text>
 
 <!-- ═══════════════════════
+     SCROLLABLE CONTENT
+     Clipped to y=38–580, animates upward as sections appear
+═══════════════════════ -->
+<g clip-path="url(#vp)">
+<g>
+
+  <!-- AUTO-SCROLL: smooth translate synced to section reveals -->
+  <animateTransform
+    attributeName="transform" type="translate"
+    values="0,0; 0,0; 0,-140; 0,-140; 0,-260; 0,-260; 0,-380; 0,-380; 0,-490; 0,-490; 0,-540; 0,-540"
+    keyTimes="0; 0.361; 0.384; 0.513; 0.534; 0.629; 0.650; 0.803; 0.824; 0.911; 0.932; 1"
+    calcMode="spline"
+    keySplines="0 0 1 1; 0.4 0 0.6 1; 0 0 1 1; 0.4 0 0.6 1; 0 0 1 1; 0.4 0 0.6 1; 0 0 1 1; 0.4 0 0.6 1; 0 0 1 1; 0.4 0 0.6 1; 0 0 1 1"
+    dur="19s" begin="0s" fill="freeze" repeatCount="1"/>
+
+<!-- ═══════════════════════
      §1  whoami
 ═══════════════════════ -->
 <text x="20" y="68"
@@ -57,7 +78,6 @@
   font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
   font-size="12" fill="#e2e8f0">whoami</text>
 
-<!-- Name -->
 <text x="20" y="104"
   font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
   font-size="32" font-weight="600" letter-spacing="-0.02em" fill="#fafafa" opacity="0">
@@ -65,7 +85,6 @@
   Aditya Kumar Singh
 </text>
 
-<!-- Role -->
 <text x="20" y="130"
   font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
   font-size="12" fill="#52525b" letter-spacing="0.06em" opacity="0">
@@ -73,45 +92,19 @@
   // Cloud Native Quality Engineer
 </text>
 
-<!-- Links -->
-<text x="20" y="152"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#3f3f46" opacity="0">
-  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>
-  work
-</text>
-<text x="62" y="152"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#3b82f6" opacity="0">
-  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>
-  nashtechglobal.com
-</text>
-<text x="224" y="152"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#3f3f46" opacity="0">
-  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>
-  li
-</text>
-<text x="242" y="152"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#3b82f6" opacity="0">
-  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>
-  linkedin.com/in/its-aks
-</text>
-<text x="430" y="152"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#3f3f46" opacity="0">
-  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>
-  npm
-</text>
-<text x="460" y="152"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#3b82f6" opacity="0">
-  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>
-  npmjs.com/~aks-builds
-</text>
+<text x="20" y="152" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>work</text>
+<text x="62" y="152" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3b82f6" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>nashtechglobal.com</text>
+<text x="224" y="152" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>li</text>
+<text x="242" y="152" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3b82f6" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>linkedin.com/in/its-aks</text>
+<text x="430" y="152" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>npm</text>
+<text x="460" y="152" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3b82f6" opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="1.36s" fill="freeze"/>npmjs.com/~aks-builds</text>
 
-<!-- DIVIDER 1 -->
 <rect x="20" y="180" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="2.0s" fill="freeze"/>
 </rect>
@@ -119,16 +112,14 @@
 <!-- ═══════════════════════
      §2  ls projects
 ═══════════════════════ -->
-<text x="20" y="212" opacity="0"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="12" fill="#22c55e">~
+<text x="20" y="212" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#22c55e">~
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="2.1s" fill="freeze"/>
 </text>
 <text x="52" y="212" clip-path="url(#c2)"
   font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
   font-size="12" fill="#e2e8f0">ls -la ./projects/</text>
 
-<!-- Project rows — PROJECTS_START -->
+<!-- PROJECTS_START -->
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.4s" fill="freeze"/>
   <text x="20" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
   <text x="120" y="238" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">cliproof</text>
@@ -139,7 +130,6 @@
   <rect x="286" y="226" width="30" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="292" y="237" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">MCP</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.54s" fill="freeze"/>
   <text x="20" y="260" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
   <text x="120" y="260" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">ai-test-failure-analyzer</text>
@@ -150,7 +140,6 @@
   <rect x="450" y="248" width="28" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="456" y="259" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">npm</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.68s" fill="freeze"/>
   <text x="20" y="282" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
   <text x="120" y="282" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">openspecpm</text>
@@ -161,7 +150,6 @@
   <rect x="296" y="270" width="28" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="302" y="281" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">BDD</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.82s" fill="freeze"/>
   <text x="20" y="304" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
   <text x="120" y="304" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">Hitro</text>
@@ -172,7 +160,6 @@
   <rect x="312" y="292" width="36" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="318" y="303" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">React</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="3.96s" fill="freeze"/>
   <text x="20" y="326" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
   <text x="120" y="326" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">reqweave</text>
@@ -181,7 +168,6 @@
   <rect x="296" y="314" width="50" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="302" y="325" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">OpenAPI</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="4.10s" fill="freeze"/>
   <text x="20" y="348" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">drwxr-xr-x</text>
   <text x="120" y="348" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" font-weight="600" fill="#22c55e">quality-skills</text>
@@ -190,16 +176,13 @@
   <rect x="306" y="336" width="22" height="14" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="312" y="347" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">QA</text>
 </g>
-
 <text x="20" y="368" opacity="0"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#2d2d2d">
+  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">
   <animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="4.24s" fill="freeze"/>
   +9 more → github.com/aks-builds
 </text>
 <!-- PROJECTS_END -->
 
-<!-- DIVIDER 2 -->
 <rect x="20" y="392" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="4.8s" fill="freeze"/>
 </rect>
@@ -207,9 +190,7 @@
 <!-- ═══════════════════════
      §3  npm
 ═══════════════════════ -->
-<text x="20" y="420" opacity="0"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="12" fill="#22c55e">~
+<text x="20" y="420" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#22c55e">~
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="4.9s" fill="freeze"/>
 </text>
 <text x="52" y="420" clip-path="url(#c3)"
@@ -230,7 +211,6 @@
   <text x="410" y="508" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#2d2d2d">→ BDD project management for AI agents</text>
 </g>
 
-<!-- DIVIDER 3 -->
 <rect x="20" y="552" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.2s" fill="freeze"/>
 </rect>
@@ -238,9 +218,7 @@
 <!-- ═══════════════════════
      §4  talks
 ═══════════════════════ -->
-<text x="20" y="580" opacity="0"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="12" fill="#22c55e">~
+<text x="20" y="580" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#22c55e">~
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="7.3s" fill="freeze"/>
 </text>
 <text x="52" y="580" clip-path="url(#c4)"
@@ -252,19 +230,16 @@
   <text x="68" y="608" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#fafafa">Smart Test Data — Faker vs AI</text>
   <text x="560" y="608" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#22c55e">NashKnolX ↗</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="9.0s" fill="freeze"/>
   <text x="20" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">2024</text>
   <text x="68" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#fafafa">Testing Event-Driven Architecture</text>
   <text x="560" y="630" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#22c55e">NashKnolX ↗</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="9.15s" fill="freeze"/>
   <text x="20" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">2024</text>
   <text x="68" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#fafafa">Clean Code in Test Automation</text>
   <text x="560" y="652" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#22c55e">NashKnolX ↗</text>
 </g>
-
 <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.18s" begin="9.3s" fill="freeze"/>
   <text x="20" y="674" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#f59e0b">SOON</text>
   <text x="68" y="674" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="11" fill="#f59e0b">AI-Assisted Test Failure Analysis</text>
@@ -272,7 +247,6 @@
   <text x="498" y="674" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#f59e0b" letter-spacing="0.04em">Jun 19 2026 · NashLearn</text>
 </g>
 
-<!-- DIVIDER 4 -->
 <rect x="20" y="704" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="10.1s" fill="freeze"/>
 </rect>
@@ -280,19 +254,16 @@
 <!-- ═══════════════════════
      §5  stack
 ═══════════════════════ -->
-<text x="20" y="732" opacity="0"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="12" fill="#22c55e">~
+<text x="20" y="732" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#22c55e">~
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="10.2s" fill="freeze"/>
 </text>
 <text x="52" y="732" clip-path="url(#c5)"
   font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
   font-size="12" fill="#e2e8f0">cat ./stack.txt</text>
 
-<!-- Stack chips — STACK_START -->
+<!-- STACK_START -->
 <g opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="11.35s" fill="freeze"/>
-  <!-- Row 1 -->
   <rect x="20" y="750" width="48" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="26" y="762" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Python</text>
   <rect x="74" y="750" width="72" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
@@ -305,7 +276,6 @@
   <text x="264" y="762" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">PowerShell</text>
   <rect x="328" y="750" width="34" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="334" y="762" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Bash</text>
-  <!-- Row 2 -->
   <rect x="20" y="772" width="62" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
   <text x="26" y="784" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#a3a3a3">Playwright</text>
   <rect x="88" y="772" width="54" height="16" rx="2" fill="none" stroke="#1c1c1c"/>
@@ -327,7 +297,6 @@
 </g>
 <!-- STACK_END -->
 
-<!-- DIVIDER 5 -->
 <rect x="20" y="812" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="12.3s" fill="freeze"/>
 </rect>
@@ -335,9 +304,7 @@
 <!-- ═══════════════════════
      §6  stats
 ═══════════════════════ -->
-<text x="20" y="840" opacity="0"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="12" fill="#22c55e">~
+<text x="20" y="840" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#22c55e">~
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="12.4s" fill="freeze"/>
 </text>
 <text x="52" y="840" clip-path="url(#c6)"
@@ -361,7 +328,6 @@
   <text x="430" y="898" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#3f3f46" letter-spacing="0.08em">CONF TALKS</text>
 </g>
 
-<!-- DIVIDER 6 -->
 <rect x="20" y="922" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="15.6s" fill="freeze"/>
 </rect>
@@ -369,9 +335,7 @@
 <!-- ═══════════════════════
      §7  fun fact
 ═══════════════════════ -->
-<text x="20" y="950" opacity="0"
-  font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="12" fill="#22c55e">~
+<text x="20" y="950" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="12" fill="#22c55e">~
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="15.7s" fill="freeze"/>
 </text>
 <text x="52" y="950" clip-path="url(#c7)"
@@ -391,7 +355,6 @@
   // and race F1 on weekends (simulated, sadly).
 </text>
 
-<!-- DIVIDER 7 (final) -->
 <rect x="20" y="1016" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="17.5s" fill="freeze"/>
 </rect>
@@ -404,19 +367,21 @@
   font-size="12" fill="#22c55e">~
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="17.7s" fill="freeze"/>
 </text>
-
-<!-- Blinking cursor (stays indefinitely) -->
 <rect x="52" y="1028" width="8" height="16" fill="#22c55e" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="17.8s" fill="freeze"/>
   <animate attributeName="opacity" values="1;0;1" dur="1s" begin="18s" repeatCount="indefinite"/>
 </rect>
-
-<!-- Replay hint — appears after animation, never disappears -->
-<text x="410" y="1072" text-anchor="middle" opacity="0"
+<text x="410" y="1068" text-anchor="middle" opacity="0"
   font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
-  font-size="10" fill="#2d2d2d" letter-spacing="0.06em">
+  font-size="11" fill="#3f3f46" letter-spacing="0.06em">
   <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="18.5s" fill="freeze"/>
-  ↻  click image to replay
+  ↻  click to replay
 </text>
+
+</g>
+</g>
+
+<!-- Border drawn on top to seal rounded corners over scrolled content -->
+<rect width="820" height="580" rx="10" fill="none" stroke="#1c1c1c" stroke-width="1.5"/>
 
 </svg>
