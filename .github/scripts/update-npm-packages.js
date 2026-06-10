@@ -43,14 +43,29 @@ async function main() {
     `https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17` +
     `&pause=1200&color=CB3837&center=true&vCenter=true&width=620&lines=${lines}`;
 
-  // One npm version badge per package, linking to npmjs.com
+  // Two adjacent badges per package:
+  //   left  (dark, npm logo + name)  → GitHub repo
+  //   right (red, version)           → npmjs.com page
   const badges = packages
     .map(p => {
-      const badgeLabel = encodeURIComponent(p.name);
-      const badge =
-        `https://img.shields.io/npm/v/${p.name}?style=flat-square` +
-        `&logo=npm&labelColor=1a1a2e&color=CB3837&label=${badgeLabel}`;
-      return `  <a href="https://www.npmjs.com/package/${p.name}"><img src="${badge}" alt="${p.name}"/></a>`;
+      const repoUrl = (p.links && p.links.repository)
+        || `https://github.com/${username}/${p.name}`;
+      const npmUrl = `https://www.npmjs.com/package/${p.name}`;
+
+      // Name badge — label=empty collapses the left sliver; message=name; logo on left
+      const nameBadge =
+        `https://img.shields.io/static/v1?label=&message=${encodeURIComponent(p.name)}` +
+        `&style=flat-square&color=1a1a2e&logo=npm&logoColor=white&labelColor=1a1a2e`;
+
+      // Version badge — label=empty hides left sliver; right side = version in red
+      const versionBadge =
+        `https://img.shields.io/npm/v/${p.name}?style=flat-square&color=CB3837&label=`;
+
+      // No whitespace between </a><a> so the two images render flush/joined
+      return (
+        `  <a href="${repoUrl}"><img src="${nameBadge}" alt="${p.name}"/></a>` +
+        `<a href="${npmUrl}"><img src="${versionBadge}" alt="${p.name} version"/></a>`
+      );
     })
     .join('\n');
 
