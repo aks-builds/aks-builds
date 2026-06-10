@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="160" viewBox="0 0 800 160">
+  <defs>
+    <!-- Clip paths for text reveal animations -->
+    <clipPath id="clip-cmd">
+      <rect x="30" y="52" height="20" width="0">
+        <animate attributeName="width" from="0" to="120" dur="0.5s" begin="0.3s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="clip-name">
+      <rect x="30" y="78" height="42" width="0">
+        <animate attributeName="width" from="0" to="400" dur="0.8s" begin="1.0s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="clip-role">
+      <rect x="30" y="122" height="20" width="0">
+        <animate attributeName="width" from="0" to="500" dur="0.6s" begin="2.0s" fill="freeze"/>
+      </rect>
+    </clipPath>
+    <clipPath id="clip-badge">
+      <rect x="30" y="142" height="20" width="0">
+        <animate attributeName="width" from="0" to="260" dur="0.4s" begin="2.8s" fill="freeze"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="160" rx="10" fill="#0a0a0a"/>
+  <!-- Border -->
+  <rect width="800" height="160" rx="10" fill="none" stroke="#1c1c1c" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <rect width="800" height="36" rx="10" fill="#111111"/>
+  <rect y="26" width="800" height="10" fill="#111111"/>
+  <rect y="36" width="800" height="1" fill="#1c1c1c"/>
+
+  <!-- macOS dots -->
+  <circle cx="18" cy="18" r="6" fill="#ef4444"/>
+  <circle cx="36" cy="18" r="6" fill="#f59e0b"/>
+  <circle cx="54" cy="18" r="6" fill="#22c55e"/>
+
+  <!-- Title bar text -->
+  <text x="400" y="22" text-anchor="middle" fill="#3f3f46"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="11" letter-spacing="0.04em">aditya@github — zsh — 120×40</text>
+
+  <!-- Subtle grid lines in content area -->
+  <line x1="0" y1="37" x2="800" y2="37" stroke="#161616" stroke-width="0.5"/>
+
+  <!-- Prompt line: whoami -->
+  <text x="30" y="66"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="12" fill="#3f3f46">
+    <tspan fill="#22c55e">~</tspan>
+    <tspan dx="4" fill="#3f3f46">  </tspan>
+    <tspan clip-path="url(#clip-cmd)" fill="#a3a3a3">whoami</tspan>
+  </text>
+
+  <!-- Name output -->
+  <text x="30" y="110" clip-path="url(#clip-name)"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="36" font-weight="600" letter-spacing="-0.02em" fill="#fafafa">Aditya S.</text>
+
+  <!-- Role output -->
+  <text x="30" y="134" clip-path="url(#clip-role)"
+    font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+    font-size="12" fill="#3f3f46" letter-spacing="0.06em">// Cloud Native Quality Engineer</text>
+
+  <!-- Available badge -->
+  <g clip-path="url(#clip-badge)">
+    <rect x="30" y="142" width="8" height="8" rx="4" fill="#22c55e" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" begin="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="44" y="151"
+      font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace"
+      font-size="10" fill="#22c55e" letter-spacing="0.06em">HIREABLE · open to new opportunities</text>
+  </g>
+
+  <!-- Blinking cursor after name -->
+  <rect x="260" y="88" width="3" height="28" fill="#22c55e">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" begin="1.8s" repeatCount="indefinite"/>
+    <!-- Hide cursor after role types in -->
+    <animate attributeName="opacity" values="1;0" dur="0.1s" begin="2.0s" fill="freeze"/>
+  </rect>
+</svg>

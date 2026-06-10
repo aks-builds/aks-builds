@@ -16,7 +16,7 @@ jobs:
         with:
           github_user_name: aks-builds
           outputs: |
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake-dark.svg?color_snake=%2322c55e&color_dots[0]=%230d0d0d&color_dots[1]=%2314532d&color_dots[2]=%23166534&color_dots[3]=%2315803d&color_dots[4]=%2322c55e&color_empty=%230a0a0a&color_bg=%230a0a0a
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
