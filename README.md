@@ -79,6 +79,17 @@
 <img src="https://img.shields.io/badge/▎_Published_on_npm-0d1117?style=for-the-badge&color=0d1117&labelColor=CB3837" />&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Package.png" width="22" alt="package"/>
 
 <!--START_SECTION:npm-packages-->
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=17&pause=1200&color=CB3837&center=true&vCenter=true&width=620&lines=%F0%9F%93%A6+ai-test-failure-analyzer;%F0%9F%93%A6+cliproof;%F0%9F%93%A6+openspecpm" alt="npm packages"/>
+
+<br/>
+
+  <a href="https://www.npmjs.com/package/ai-test-failure-analyzer"><img src="https://img.shields.io/npm/v/ai-test-failure-analyzer?style=flat-square&logo=npm&labelColor=1a1a2e&color=CB3837&label=ai-test-failure-analyzer" alt="ai-test-failure-analyzer"/></a>
+  <a href="https://www.npmjs.com/package/cliproof"><img src="https://img.shields.io/npm/v/cliproof?style=flat-square&logo=npm&labelColor=1a1a2e&color=CB3837&label=cliproof" alt="cliproof"/></a>
+  <a href="https://www.npmjs.com/package/openspecpm"><img src="https://img.shields.io/npm/v/openspecpm?style=flat-square&logo=npm&labelColor=1a1a2e&color=CB3837&label=openspecpm" alt="openspecpm"/></a>
+
+</div>
 <!--END_SECTION:npm-packages-->
 
 ---
