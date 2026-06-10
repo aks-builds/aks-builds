@@ -39,13 +39,13 @@ jobs:
 
       - name: Commit if changed
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add terminal-session.svg
+          git pull --rebase --autostash origin main || true
           if [ -n "$(git status --porcelain terminal-session.svg)" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add terminal-session.svg
-            git pull --rebase --autostash origin main || true
             git commit -m "chore(profile): regenerate terminal SVG"
             git push
           else
-            echo "No changes to commit."
+            echo "No changes after pull — already up to date."
           fi
