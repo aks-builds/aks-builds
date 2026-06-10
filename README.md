@@ -26,22 +26,22 @@
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4>🔫 <a href="https://github.com/aks-builds/Hitro">Hitro</a></h4>
-      A local-first desktop API client built with Electron + React, supporting REST, gRPC, GraphQL, WebSocket, Kafka, AWS SQS, MQTT, SSE, and Socket.IO — with built-in mock server, load testing, request chaining, and response snapshot testing.
+      <h4>🛡️ <a href="https://github.com/aks-builds/cliproof">cliproof</a></h4>
+      Prove your CLI actually works. A Claude Code skill that captures a real terminal command and its real output as a polished screenshot or GIF — secrets redacted, command-guarded — and embeds it into your README as proof-it-runs evidence.
     </td>
     <td width="50%" valign="top">
-      <h4>🧪 <a href="https://github.com/aks-builds/reqweave">reqweave</a></h4>
-      Read your service code; generate ready-to-import API collections for every testing tool (Postman, OpenAPI, Insomnia, Bruno, Hoppscotch, Thunder Client, .http) with exhaustive request variants.
+      <h4>🔫 <a href="https://github.com/aks-builds/Hitro">Hitro</a></h4>
+      A local-first desktop API client built with Electron + React, supporting REST, gRPC, GraphQL, WebSocket, Kafka, AWS SQS, MQTT, SSE, and Socket.IO — with built-in mock server, load testing, request chaining, and response snapshot testing.
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h4>🧪 <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
-      Reusable GitHub Actions workflows and automation scripts I share across my repositories.
+      <h4>🧪 <a href="https://github.com/aks-builds/reqweave">reqweave</a></h4>
+      Read your service code; generate ready-to-import API collections for every testing tool (Postman, OpenAPI, Insomnia, Bruno, Hoppscotch, Thunder Client, .http) with exhaustive request variants.
     </td>
     <td width="50%" valign="top">
-      <h4>🛡️ <a href="https://github.com/aks-builds/cliproof">cliproof</a></h4>
-      Prove your CLI actually works. A Claude Code skill that captures a real terminal command and its real output as a polished screenshot or GIF — secrets redacted, command-guarded — and embeds it into your README as proof-it-runs evidence.
+      <h4>🧪 <a href="https://github.com/aks-builds/workflows">workflows</a></h4>
+      Reusable GitHub Actions workflows and automation scripts I share across my repositories.
     </td>
   </tr>
   <tr>
