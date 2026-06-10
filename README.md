@@ -76,6 +76,13 @@
 
 ---
 
+<img src="https://img.shields.io/badge/▎_Published_on_npm-0d1117?style=for-the-badge&color=0d1117&labelColor=CB3837" />&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Package.png" width="22" alt="package"/>
+
+<!--START_SECTION:npm-packages-->
+<!--END_SECTION:npm-packages-->
+
+---
+
 <img src="https://img.shields.io/badge/▎_On_the_mic-0d1117?style=for-the-badge&color=0d1117&labelColor=58a6ff" />
 
 <table>
