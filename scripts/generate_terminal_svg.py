@@ -68,7 +68,7 @@ def build_project_rows(repos):
     """Build SVG text for top-6 project rows starting at y=220."""
     top = [r for r in repos if r["name"] not in SKIP_REPOS][:6]
     ROW_H = 18
-    Y0    = 220
+    Y0    = 238
     lines = []
     for i, r in enumerate(top):
         y   = Y0 + i * ROW_H
