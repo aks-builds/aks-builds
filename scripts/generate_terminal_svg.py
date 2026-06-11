@@ -65,43 +65,48 @@ def tag_chip_svg(x, y, label, color="#a3a3a3"):
 
 
 def build_project_rows(repos):
-    """Build SVG text for top-6 project rows starting at y=220."""
+    """Build SVG text for top-6 project rows starting at y=238."""
     top = [r for r in repos if r["name"] not in SKIP_REPOS][:6]
-    ROW_H = 18
-    Y0    = 238
+    ROW_H     = 18
+    Y0        = 238
+    T_START   = 3.15   # ls command finishes typing at ~3.04s
+    T_CASCADE = 0.06   # stagger between rows
     lines = []
     for i, r in enumerate(top):
-        y   = Y0 + i * ROW_H
+        y    = Y0 + i * ROW_H
+        t    = round(T_START + i * T_CASCADE, 3)
+        anim = (f'<animate attributeName="opacity" from="0" to="1" '
+                f'dur="0.05s" begin="{t}s" fill="freeze"/>')
         name = r["name"]
         tags = REPO_TAGS.get(name, [r.get("language") or "—"])[:3]
 
-        # permissions text
         lines.append(
-            f'  <text x="20" y="{y}" '
-            f'font-family="{MONO}" font-size="10" fill="#3f3f46">drwxr-xr-x</text>')
-        # repo name
+            f'  <text x="20" y="{y}" opacity="0" '
+            f'font-family="{MONO}" font-size="10" fill="#3f3f46">drwxr-xr-x{anim}</text>')
         lines.append(
-            f'  <text x="120" y="{y}" '
+            f'  <text x="120" y="{y}" opacity="0" '
             f'font-family="{MONO}" font-size="11" font-weight="600" '
-            f'fill="#22c55e">{name}</text>')
-        # tag chips
-        name_w   = len(name) * 7  # rough char width at font-size 11
-        tag_x    = 120 + name_w + 10
+            f'fill="#22c55e">{name}{anim}</text>')
+        name_w = len(name) * 7
+        tag_x  = 120 + name_w + 10
         for tag in tags:
             color = TAG_COLORS.get(tag, "#52525b")
-            w = len(tag) * 6 + 12
+            w     = len(tag) * 6 + 12
             lines.append(
                 f'  <rect x="{tag_x}" y="{y-11}" width="{w}" height="14" '
-                f'rx="2" fill="none" stroke="#1c1c1c"/>')
+                f'rx="2" fill="none" stroke="#1c1c1c" opacity="0">{anim}</rect>')
             lines.append(
-                f'  <text x="{tag_x+6}" y="{y}" '
-                f'font-family="{MONO}" font-size="9" fill="#52525b">{tag}</text>')
+                f'  <text x="{tag_x+6}" y="{y}" opacity="0" '
+                f'font-family="{MONO}" font-size="9" fill="{color}">{tag}{anim}</text>')
             tag_x += w + 4
 
+    t_more    = round(T_START + 6 * T_CASCADE, 3)
+    anim_more = (f'<animate attributeName="opacity" from="0" to="1" '
+                 f'dur="0.05s" begin="{t_more}s" fill="freeze"/>')
     lines.append(
-        f'  <text x="20" y="{Y0 + 6*ROW_H + 4}" '
+        f'  <text x="20" y="{Y0 + 6*ROW_H + 4}" opacity="0" '
         f'font-family="{MONO}" font-size="10" fill="#3f3f46">'
-        f'+{len(repos)-6} more → github.com/aks-builds</text>')
+        f'+{{len(repos)-6}} more → github.com/aks-builds{anim_more}</text>')
     return "\n".join(lines)
 
 
