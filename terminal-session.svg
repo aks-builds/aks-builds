@@ -97,7 +97,7 @@
   <text x="247" y="328" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">Electron<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="3.45s" fill="freeze"/></text>
   <rect x="305" y="317" width="42" height="14" rx="2" fill="none" stroke="#1c1c1c" opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="3.45s" fill="freeze"/></rect>
   <text x="311" y="328" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="9" fill="#52525b">React<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="3.45s" fill="freeze"/></text>
-  <text x="20" y="350" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">+{len(repos)-6} more &#x2192; github.com/aks-builds<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="3.51s" fill="freeze"/></text>
+  <text x="20" y="350" opacity="0" font-family="ui-monospace,'Cascadia Code','Source Code Pro',Menlo,Consolas,monospace" font-size="10" fill="#3f3f46">+{len(repos)-6} more → github.com/aks-builds<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="3.51s" fill="freeze"/></text>
 <!-- PROJECTS_END -->
 <rect x="20" y="396" width="780" height="1" fill="#1c1c1c" opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="4.75s" fill="freeze"/>
