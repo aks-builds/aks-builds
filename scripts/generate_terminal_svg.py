@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-generate_terminal_svg.py — Regenerates terminal-session.svg with live repo data.
+generate_terminal_svg.py — Regenerates terminal-session.svg with live repo/npm data.
 
-Updates two dynamic sections inside the SVG:
+Updates three dynamic sections inside the SVG:
   - Project rows (top 6 non-fork repos by push date)
   - Stack chips (languages aggregated across all repos)
+  - npm install box + stats section (packages from npm registry, auto-resizes SVG height)
 
-Everything else (npm, talks, stats, fun fact) is static in the SVG.
 Pure stdlib — no pip install required.
 """
 import json, os, re, sys, urllib.error, urllib.request
@@ -155,10 +155,130 @@ def build_stack_chips(repos):
     return "\n".join(lines)
 
 
-PROJ_START  = "<!-- PROJECTS_START -->"
-PROJ_END    = "<!-- PROJECTS_END -->"
+PROJ_START = "<!-- PROJECTS_START -->"
+PROJ_END   = "<!-- PROJECTS_END -->"
 STACK_START = "<!-- STACK_START -->"
 STACK_END   = "<!-- STACK_END -->"
+NPM_START  = "<!-- NPM_START -->"
+NPM_END    = "<!-- NPM_END -->"
+
+# ── npm section constants ──────────────────────────────────────────────────────
+NPM_BOX_Y    = 440
+NPM_FIRST_Y  = 464   # y of first install line (24px below box top)
+NPM_LINE_H   = 24
+NPM_BOT_PAD  = 20
+SEP_GAP      = 24    # gap from box bottom to separator
+CMD_OFFSET   = 28    # separator → command baseline
+NUM_OFFSET   = 40    # command → stat number baseline
+LBL_OFFSET   = 18    # number → label baseline
+FSEP_OFFSET  = 24    # label → final separator
+FPROMPT_OFF  = 28    # final separator → prompt baseline
+CURSOR_ABOVE = 14    # prompt baseline − cursor rect top
+SVG_BTM_PAD  = 20    # cursor bottom → SVG edge
+
+NPM_DESCRIPTIONS = {
+    "ai-test-failure-analyzer": "AI-powered test root-cause",
+    "cliproof":                  "terminal screenshot proof tool",
+    "har-to-slo":                "convert HAR files to SLO metrics",
+    "openspecpm":                "BDD project management for AI agents",
+}
+
+
+def fetch_npm_packages():
+    url = f"https://registry.npmjs.org/-/v1/search?text=maintainer:{USER}&size=50"
+    req = urllib.request.Request(url)
+    req.add_header("User-Agent", f"{USER}-profile-bot")
+    with urllib.request.urlopen(req, timeout=30) as r:
+        data = json.loads(r.read())
+    pkgs = [o["package"] for o in data.get("objects", [])]
+    return sorted(pkgs, key=lambda p: p["name"])
+
+
+def build_npm_section(packages):
+    """Return (svg_fragment, total_svg_height) for the NPM_START…NPM_END block."""
+    n = len(packages)
+    box_h      = (NPM_FIRST_Y - NPM_BOX_Y) + (n - 1) * NPM_LINE_H + NPM_BOT_PAD
+    box_bot    = NPM_BOX_Y + box_h
+    sep_y      = box_bot + SEP_GAP
+    cmd_y      = sep_y + CMD_OFFSET
+    num_y      = cmd_y + NUM_OFFSET
+    lbl_y      = num_y + LBL_OFFSET
+    fsep_y     = lbl_y + FSEP_OFFSET
+    fprompt_y  = fsep_y + FPROMPT_OFF
+    cursor_y   = fprompt_y - CURSOR_ABOVE
+    svg_h      = cursor_y + 16 + SVG_BTM_PAD
+
+    L = []
+    # npm install box
+    L.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="6.2s" fill="freeze"/>')
+    L.append(f'<rect x="20" y="{NPM_BOX_Y}" width="780" height="{box_h}" rx="4" fill="none" stroke="#1c1c1c"/>')
+    for i, pkg in enumerate(packages):
+        y    = NPM_FIRST_Y + i * NPM_LINE_H
+        name = pkg["name"]
+        desc = NPM_DESCRIPTIONS.get(name) or (pkg.get("description") or "npm package")
+        L.append(f'<text x="34" y="{y}" font-family="{MONO}" font-size="11" fill="#22c55e">$</text>')
+        L.append(f'<text x="48" y="{y}" font-family="{MONO}" font-size="11" fill="#e2e8f0">npm install -g {name}</text>')
+        L.append(f'<text x="440" y="{y}" font-family="{MONO}" font-size="10" fill="#2d2d2d">&#x2192; {desc}</text>')
+    L.append('</g>')
+
+    # separator before §4
+    L.append(f'<rect x="20" y="{sep_y}" width="780" height="1" fill="#1c1c1c" opacity="0">')
+    L.append(f'  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.0s" fill="freeze"/>')
+    L.append(f'</rect>')
+
+    # §4 gh stats — command with typing animation
+    L.append(f'<!-- §4 gh stats -->')
+    L.append(f'<text x="20" y="{cmd_y}" opacity="0" font-family="{MONO}" font-size="12" fill="#22c55e">~'
+             f'<animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="7.1s" fill="freeze"/></text>')
+    typing = "gh stats --user aks-builds"
+    tspans = []
+    for j, ch in enumerate(typing):
+        t    = round(7.2 + j * 0.055, 3)
+        safe = ch.replace("&", "&amp;").replace("<", "&lt;")
+        tspans.append(f'<tspan opacity="0">'
+                      f'<animate attributeName="opacity" from="0" to="1" dur="0.01s" begin="{t}s" fill="freeze"/>'
+                      f'{safe}</tspan>')
+    L.append(f'<text x="52" y="{cmd_y}" font-family="{MONO}" font-size="12" fill="#e2e8f0">{"".join(tspans)}</text>')
+
+    # stat counters
+    for x, val, lbl, t in [
+        (20,  "16",  "REPOSITORIES", "8.7s"),
+        (140, "5+",  "NPM PACKAGES", "8.9s"),
+        (280, "50+", "AGENT SKILLS", "9.1s"),
+        (430, "3",   "CONF TALKS",   "9.3s"),
+    ]:
+        L.append(f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="{t}" fill="freeze"/>')
+        L.append(f'<text x="{x}" y="{num_y}" font-family="{MONO}" font-size="30" font-weight="600" fill="#22c55e">{val}</text>')
+        L.append(f'<text x="{x}" y="{lbl_y}" font-family="{MONO}" font-size="9" fill="#3f3f46" letter-spacing="0.08em">{lbl}</text>')
+        L.append('</g>')
+
+    # final separator
+    L.append(f'<rect x="20" y="{fsep_y}" width="780" height="1" fill="#1c1c1c" opacity="0">')
+    L.append(f'  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="9.7s" fill="freeze"/>')
+    L.append(f'</rect>')
+
+    # final prompt
+    L.append(f'<text x="20" y="{fprompt_y}" opacity="0" font-family="{MONO}" font-size="12" fill="#22c55e">~')
+    L.append(f'  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="9.9s" fill="freeze"/>')
+    L.append(f'</text>')
+
+    # blinking cursor
+    L.append(f'<rect x="52" y="{cursor_y}" width="8" height="16" fill="#22c55e" opacity="0">')
+    L.append(f'  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="10.0s" fill="freeze"/>')
+    L.append(f'  <animate attributeName="opacity" values="1;0;1" dur="1s" begin="10.1s" repeatCount="indefinite"/>')
+    L.append(f'</rect>')
+
+    return "\n".join(L), svg_h
+
+
+def update_svg_height(svg, h):
+    """Patch the four height references in the SVG element and child rects."""
+    svg = re.sub(r'(<svg[^>]*\bheight=")[^"]*(")', rf'\g<1>{h}\g<2>', svg)
+    svg = re.sub(r'(<svg[^>]*viewBox="0 0 820 )[^"]*(")', rf'\g<1>{h}\g<2>', svg)
+    svg = re.sub(r'(<clipPath[^>]*><rect[^>]+height=")[^"]*(")', rf'\g<1>{h - 38}\g<2>', svg)
+    svg = re.sub(r'(<rect width="820" height=")[^"]*(" rx="10" fill="#0a0a0a")', rf'\g<1>{h}\g<2>', svg)
+    svg = re.sub(r'(<rect width="820" height=")[^"]*(" rx="10" fill="none")', rf'\g<1>{h}\g<2>', svg)
+    return svg
 
 
 def replace_block(text, start, end, content):
@@ -176,8 +296,20 @@ def main():
     with open(SVG, "r", encoding="utf-8") as f:
         svg = f.read()
 
-    svg = replace_block(svg, PROJ_START,  PROJ_END,  build_project_rows(repos))
+    svg = replace_block(svg, PROJ_START, PROJ_END, build_project_rows(repos))
     svg = replace_block(svg, STACK_START, STACK_END, build_stack_chips(repos))
+
+    try:
+        packages = fetch_npm_packages()
+    except Exception as e:
+        print(f"WARNING: npm fetch failed ({e}) — skipping npm section", file=sys.stderr)
+        packages = []
+
+    if packages:
+        npm_block, svg_h = build_npm_section(packages)
+        svg = replace_block(svg, NPM_START, NPM_END, npm_block)
+        svg = update_svg_height(svg, svg_h)
+        print(f"npm section: {len(packages)} package(s), SVG height → {svg_h}px.")
 
     with open(SVG, "w", encoding="utf-8", newline="\n") as f:
         f.write(svg)
